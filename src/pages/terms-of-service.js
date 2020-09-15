@@ -3,7 +3,13 @@ import Layout from '../layout'
 
 export default function TermsOfService() {
   return (
-    <Layout>
+    <Layout navLinks={[{
+      text: 'Terms of Service',
+      url: '#'
+    }, {
+      text: 'Privacy Policy',
+      url: '#Privacy-Policy'
+    }]}>
       <div id="Terms-of-Services" className="section tos">
         <div className="container">
           <div className="text-img">

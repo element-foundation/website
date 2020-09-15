@@ -2,7 +2,14 @@ import React from "react"
 import Layout from '../layout'
 
 export default function Home() {
-  return <Layout>
+  return <Layout navLinks={[{
+      text: 'Dai Foundation',
+      url: '#Dai-Foundation'
+    }, {
+      text: 'Purpose',
+      url: '#Purpose'
+    }
+  ]}>
     <div id="Home" className="section hero">
       <div className="container">
         <div className="max-700px"><h1 className="h1-style white">The Dai Foundation</h1>

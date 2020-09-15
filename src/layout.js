@@ -1,7 +1,7 @@
 import React from "react"
 import './style.css'
 
-export default function Layout({navLinks, children}) {
+export default function Layout({navLinks = [], children}) {
 
   return (
   <div>
@@ -13,13 +13,13 @@ export default function Layout({navLinks, children}) {
           srcSet="https://uploads-ssl.webflow.com/5f16c336de8961326b391c37/5f16c4121ce3203ad30fdf6d_Dai_foundation_colour-p-500.png 500w, https://uploads-ssl.webflow.com/5f16c336de8961326b391c37/5f16c4121ce3203ad30fdf6d_Dai_foundation_colour-p-800.png 800w, https://uploads-ssl.webflow.com/5f16c336de8961326b391c37/5f16c4121ce3203ad30fdf6d_Dai_foundation_colour-p-1080.png 1080w, https://uploads-ssl.webflow.com/5f16c336de8961326b391c37/5f16c4121ce3203ad30fdf6d_Dai_foundation_colour.png 1302w"
           sizes="(max-width: 479px) 100vw, 250px" alt=""/></a>
           <div className="navi-link-wrapper">
-            <a href="#Home" className="navi-links">Home</a>
-            <a href="#Dai-Foundation" className="navi-links">The Dai Foundation</a>
-            <a href="#Purpose" className="navi-links">Purpose</a>
+            {[{text: 'Home', url: '/'}, ...navLinks].map(link =>
+              <a href={link.url} className="navi-links">{link.text}</a>
+            )}
           </div>
         </div>
       </div>
-      <div className="navi-line"></div>
+      <div className="navi-line" />
     </div>
     {children}
     <div id="Footer" className="section footer">
