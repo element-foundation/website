@@ -1,5 +1,6 @@
 import React from "react"
 import Helmet from "helmet"
+import { Link } from 'gatsby'
 import './style.css'
 
 export default function Layout({navLinks = [], children}) {
@@ -45,7 +46,7 @@ export default function Layout({navLinks = [], children}) {
           sizes="(max-width: 479px) 100vw, 250px" alt=""/></a>
           <div className="navi-link-wrapper">
             {[{text: 'Home', url: '/'}, ...navLinks].map(link =>
-              <a href={link.url} className="navi-links">{link.text}</a>
+              <Link to={link.url} className="navi-links">{link.text}</Link>
             )}
           </div>
         </div>
@@ -63,12 +64,12 @@ export default function Layout({navLinks = [], children}) {
             sizes="(max-width: 479px) 57vw, 250px" alt="" className="image-2"/></a>
             <div className="text-block copyright">Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)</div>
           </div>
-          <div className="footer-info"><a href="/terms-of-service" className="link-2">Privacy Policy</a></div>
-          <div className="footer-info"><a href="/terms-of-service" className="link-2">Terms of Services</a></div>
-          <div className="footer-info"><a href="https://www.linkedin.com/company/daifoundation" target="_blank"
+          <div className="footer-info"><Link to="/terms-of-service" className="link-2">Privacy Policy</Link></div>
+          <div className="footer-info"><Link to="/terms-of-service" className="link-2">Terms of Services</Link></div>
+          <div className="footer-info"><Link to="https://www.linkedin.com/company/daifoundation" target="_blank"
                                           className="w-inline-block"><img
             src="https://uploads-ssl.webflow.com/5f16c336de8961326b391c37/5f1af3bf039ee3b166bf8e02_5ef0abee113da29ef36c2998_linkedin.svg"
-            alt="" className="image-3"/></a></div>
+            alt="" className="image-3"/></Link></div>
         </div>
       </div>
     </div>
