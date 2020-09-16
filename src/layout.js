@@ -1,10 +1,41 @@
 import React from "react"
+import Helmet from "helmet"
 import './style.css'
 
 export default function Layout({navLinks = [], children}) {
 
   return (
   <div>
+    <Helmet>
+      <link
+        rel="preload"
+        as="font"
+        href="/fonts/Mukta/Mukta-Regular.woff2"
+        type="font/woff2"
+        crossOrigin="anonymous"
+      />
+      <link
+        rel="preload"
+        as="font"
+        href="/fonts/Mukta/Mukta-Regular.woff"
+        type="font/woff"
+        crossOrigin="anonymous"
+      />
+      <link
+        rel="preload"
+        as="font"
+        href="/fonts/Mukta/Mukta-Bold.woff2"
+        type="font/woff2"
+        crossOrigin="anonymous"
+      />
+      <link
+        rel="preload"
+        as="font"
+        href="/fonts/Mukta/Mukta-Bold.woff"
+        type="font/woff"
+        crossOrigin="anonymous"
+      />
+    </Helmet>
     <div className="navi">
       <div className="constainer">
         <div className="navi-wrapper"><a href="#Home" className="w-inline-block"><img
