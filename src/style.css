@@ -79,12 +79,22 @@ h6 {
 }
 
 p {
+  margin-top: 0;
   margin-bottom: 16px;
   font-family: Mukta, sans-serif;
   font-size: 20px;
   line-height: 32px;
-  font-weight: 400;
   text-align: justify;
+  color: #000;
+}
+
+p.left-column {
+  max-width: 90%;
+  color: #fff;
+}
+
+p.pp {
+  color: #fff;
 }
 
 a {
@@ -180,21 +190,7 @@ a {
   background-color: #1e172e;
 }
 
-p {
-  margin-top: 0;
-  font-family: Mukta, sans-serif;
-  color: #000;
-  font-weight: 400;
-}
 
-p.left-column {
-  max-width: 90%;
-  color: #fff;
-}
-
-p.pp {
-  color: #fff;
-}
 
 .navi {
   position: fixed;
@@ -364,7 +360,7 @@ justify-content: space-between;
 .heading {
     font-size: 36px;
   }
-  .parastyle {
+  p {
     text-align: left;
   }
   .navi-link-wrapper {
