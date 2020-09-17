@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../layout"
+import { Box } from "theme-ui"
 
 export default function TermsOfService() {
   return (
@@ -17,22 +18,20 @@ export default function TermsOfService() {
     >
       <div id="Terms-of-Services" className="section tos">
         <div className="container">
-          <div className="text-img">
-            <div className="max-1000px">
+            <Box sx={{maxWidth: '1000px'}}>
               <h2 className="heading-4">Terms of Service</h2>
-              <p className="parastyle">Add text here</p>
-            </div>
-          </div>
+              <p>Add text here</p>
+            </Box>
         </div>
       </div>
       <div className="section-line" />
       <div id="Privacy-Policy" className="section pp">
         <div className="container">
           <div className="text-img">
-            <div className="max-1000px">
+            <Box sx={{maxWidth: '1000px'}}>
               <h2 className="heading-3 pp">Privacy Policy</h2>
-              <p className="parastyle pp">Add text here</p>
-            </div>
+              <p className="pp">Add text here</p>
+            </Box>
           </div>
         </div>
       </div>

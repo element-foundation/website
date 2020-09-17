@@ -154,6 +154,11 @@ a {
   background-size: 1950px;
 }
 
+.section.hero h1 {
+  margin-bottom: 15px;
+  color: #000;
+}
+
 .section.noimg {
   background-color: #1e172e;
 }
@@ -175,33 +180,20 @@ a {
   background-color: #1e172e;
 }
 
-.h1-style.white {
-  margin-bottom: 15px;
-  color: #000;
-}
-
-.parastyle {
-  margin-top: 0px;
+p {
+  margin-top: 0;
   font-family: Mukta, sans-serif;
   color: #000;
   font-weight: 400;
 }
 
-.parastyle.left-column {
+p.left-column {
   max-width: 90%;
   color: #fff;
 }
 
-.parastyle.pp {
+p.pp {
   color: #fff;
-}
-
-.max-700px {
-  max-width: 700px;
-}
-
-.max-600px {
-  max-width: 600px;
 }
 
 .navi {
@@ -245,14 +237,6 @@ a {
   font-weight: 400;
 }
 
-.bold-text {
-  color: #fff;
-}
-
-.bold-text-2 {
-  color: #fff;
-}
-
 .text-block {
   margin-top: 24px;
   font-family: Mukta, sans-serif;
@@ -269,10 +253,6 @@ justify-content: space-between;
   margin-top: 10px;
   margin-bottom: 0px;
   padding-bottom: 0px;
-}
-
-.max-1000px {
-  max-width: 1000px;
 }
 
 .heading-3 {
