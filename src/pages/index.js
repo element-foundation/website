@@ -1,6 +1,26 @@
 import React from "react"
 import Layout from "../layout"
 import { Box } from "theme-ui"
+import styled from 'styled-components'
+
+const Button = styled.a`
+  display: inline-block;
+  padding: 10px 20px;
+  align-self: center;
+  border-radius: 20px;
+  background-color: #211734;
+  font-family: Mukta, sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  text-decoration: none;
+  
+  @media screen and (max-width: 767px) {
+    padding: 15px 20px;
+    font-size: 18px;
+  }
+`
 
 export default function Home() {
   return (
@@ -26,9 +46,9 @@ export default function Home() {
                 community’s intellectual property.
               </p>
             </Box>
-            <a href="#Dai-Foundation" className="button">
+            <Button href="#Dai-Foundation">
               Learn More
-            </a>
+            </Button>
           </Box>
         </div>
       </div>
