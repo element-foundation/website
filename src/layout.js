@@ -92,9 +92,9 @@ export default function Layout({ navLinks = [], children }) {
               </Link>
             </div>
             <div>
-              <Link to="https://www.linkedin.com/company/daifoundation">
+              <a href="https://www.linkedin.com/company/daifoundation" target="_blank" rel="noopener noreferrer">
                 <LinkedInLogo />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
