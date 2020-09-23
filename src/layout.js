@@ -1,9 +1,22 @@
 import React from "react"
 import Helmet from "helmet"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import "./style.css"
 
 export default function Layout({ navLinks = [], children }) {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "Dai_foundation_colour.png" }) {
+        childImageSharp {
+          fixed(width: 250) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <div>
       <Helmet>
@@ -40,13 +53,7 @@ export default function Layout({ navLinks = [], children }) {
         <div className="constainer">
           <div className="navi-wrapper">
             <a href="#Home" className="w-inline-block">
-              <img
-                src="https://uploads-ssl.webflow.com/5f16c336de8961326b391c37/5f16c4121ce3203ad30fdf6d_Dai_foundation_colour.png"
-                width="250"
-                srcSet="https://uploads-ssl.webflow.com/5f16c336de8961326b391c37/5f16c4121ce3203ad30fdf6d_Dai_foundation_colour-p-500.png 500w, https://uploads-ssl.webflow.com/5f16c336de8961326b391c37/5f16c4121ce3203ad30fdf6d_Dai_foundation_colour-p-800.png 800w, https://uploads-ssl.webflow.com/5f16c336de8961326b391c37/5f16c4121ce3203ad30fdf6d_Dai_foundation_colour-p-1080.png 1080w, https://uploads-ssl.webflow.com/5f16c336de8961326b391c37/5f16c4121ce3203ad30fdf6d_Dai_foundation_colour.png 1302w"
-                sizes="(max-width: 479px) 100vw, 250px"
-                alt=""
-              />
+              <Img fixed={data.file.childImageSharp.fixed} alt="Dai Foundation" />
             </a>
             <div className="navi-link-wrapper">
               {[{ text: "Home", url: "/" }, ...navLinks].map(link => (
@@ -69,14 +76,7 @@ export default function Layout({ navLinks = [], children }) {
                 aria-current="page"
                 className="w-inline-block w--current"
               >
-                <img
-                  src="https://uploads-ssl.webflow.com/5f16c336de8961326b391c37/5f16c4121ce3203ad30fdf6d_Dai_foundation_colour.png"
-                  width="250"
-                  srcSet="https://uploads-ssl.webflow.com/5f16c336de8961326b391c37/5f16c4121ce3203ad30fdf6d_Dai_foundation_colour-p-500.png 500w, https://uploads-ssl.webflow.com/5f16c336de8961326b391c37/5f16c4121ce3203ad30fdf6d_Dai_foundation_colour-p-800.png 800w, https://uploads-ssl.webflow.com/5f16c336de8961326b391c37/5f16c4121ce3203ad30fdf6d_Dai_foundation_colour-p-1080.png 1080w, https://uploads-ssl.webflow.com/5f16c336de8961326b391c37/5f16c4121ce3203ad30fdf6d_Dai_foundation_colour.png 1302w"
-                  sizes="(max-width: 479px) 57vw, 250px"
-                  alt=""
-                  className="image-2"
-                />
+                <Img fixed={data.file.childImageSharp.fixed} alt="Dai Foundation" />
               </a>
               <div className="text-block copyright">
                 Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
