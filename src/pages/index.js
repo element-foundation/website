@@ -7,7 +7,7 @@ export default function Home() {
     <Layout
       navLinks={[
         {
-          text: "Dai Foundation",
+          text: "The Dai Foundation",
           url: "#Dai-Foundation",
         },
         {

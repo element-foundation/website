@@ -4,6 +4,42 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import "./style.css"
 import LinkedInLogo from './images/imported/linkedin.svg'
+import { Box } from 'theme-ui'
+import styled from 'styled-components'
+
+const Header = styled(Box)`
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  
+  .navi-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navi-link-wrapper {
+    padding-bottom: 6px;
+  }
+  
+  .navi-link {
+    margin-right: 10px;
+    margin-left: 10px;
+    font-family: Mukta, sans-serif;
+    text-decoration: none;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .navi-link-wrapper {
+      display: none;
+    }
+  }
+`
 
 export default function Layout({ navLinks = [], children }) {
   const data = useStaticQuery(graphql`
@@ -56,21 +92,20 @@ export default function Layout({ navLinks = [], children }) {
           crossOrigin="anonymous"
         />
       </Helmet>
-      <div className="navi">
-        <div className="constainer">
+      <Header>
+        <div className="container">
           <div className="navi-wrapper">
             <LogoLink />
             <div className="navi-link-wrapper">
               {[{ text: "Home", url: "/" }, ...navLinks].map(link => (
-                <Link to={link.url} className="navi-links">
+                <Link to={link.url} className="navi-link">
                   {link.text}
                 </Link>
               ))}
             </div>
           </div>
         </div>
-        <div className="navi-line" />
-      </div>
+      </Header>
       {children}
       <div id="Footer" className="section footer">
         <div className="container">
