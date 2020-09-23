@@ -12,10 +12,18 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: path.join(__dirname, `src`, `img`),
+        path: path.join(__dirname, `src`, 'images', 'queried'),
       },
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          exclude: /inline/,
+        },
+      },
+    },
   ],
 }

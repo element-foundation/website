@@ -3,6 +3,7 @@ import Helmet from "helmet"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import "./style.css"
+import LinkedInLogo from './images/imported/linkedin.svg'
 
 export default function Layout({ navLinks = [], children }) {
   const data = useStaticQuery(graphql`
@@ -74,29 +75,25 @@ export default function Layout({ navLinks = [], children }) {
       <div id="Footer" className="section footer">
         <div className="container">
           <div className="footer-wrapper">
-            <div className="footer-info">
+            <div>
               <LogoLink />
               <div className="text-block copyright">
                 Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
               </div>
             </div>
-            <div className="footer-info">
+            <div>
               <Link to="/terms-of-service#Privacy-Policy" className="link-2">
                 Privacy Policy
               </Link>
             </div>
-            <div className="footer-info">
+            <div>
               <Link to="/terms-of-service#Terms-of-Services" className="link-2">
                 Terms of Services
               </Link>
             </div>
-            <div className="footer-info">
+            <div>
               <Link to="https://www.linkedin.com/company/daifoundation">
-                <img
-                  src="https://uploads-ssl.webflow.com/5f16c336de8961326b391c37/5f1af3bf039ee3b166bf8e02_5ef0abee113da29ef36c2998_linkedin.svg"
-                  alt=""
-                  className="image-3"
-                />
+                <LinkedInLogo />
               </Link>
             </div>
           </div>
