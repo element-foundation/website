@@ -8,7 +8,7 @@ export default function TermsOfService() {
       navLinks={[
         {
           text: "Terms of Service",
-          url: "#",
+          url: "#Terms-of-Services",
         },
         {
           text: "Privacy Policy",

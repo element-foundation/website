@@ -17,6 +17,12 @@ export default function Layout({ navLinks = [], children }) {
     }
   `)
 
+  const LogoLink = () => (
+    <Link to="/">
+      <Img fixed={data.file.childImageSharp.fixed} alt="Dai Foundation" />
+    </Link>
+  )
+
   return (
     <div>
       <Helmet>
@@ -52,9 +58,7 @@ export default function Layout({ navLinks = [], children }) {
       <div className="navi">
         <div className="constainer">
           <div className="navi-wrapper">
-            <a href="#Home" className="w-inline-block">
-              <Img fixed={data.file.childImageSharp.fixed} alt="Dai Foundation" />
-            </a>
+            <LogoLink />
             <div className="navi-link-wrapper">
               {[{ text: "Home", url: "/" }, ...navLinks].map(link => (
                 <Link to={link.url} className="navi-links">
@@ -71,33 +75,23 @@ export default function Layout({ navLinks = [], children }) {
         <div className="container">
           <div className="footer-wrapper">
             <div className="footer-info">
-              <a
-                href="/"
-                aria-current="page"
-                className="w-inline-block w--current"
-              >
-                <Img fixed={data.file.childImageSharp.fixed} alt="Dai Foundation" />
-              </a>
+              <LogoLink />
               <div className="text-block copyright">
                 Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
               </div>
             </div>
             <div className="footer-info">
-              <Link to="/terms-of-service" className="link-2">
+              <Link to="/terms-of-service#Privacy-Policy" className="link-2">
                 Privacy Policy
               </Link>
             </div>
             <div className="footer-info">
-              <Link to="/terms-of-service" className="link-2">
+              <Link to="/terms-of-service#Terms-of-Services" className="link-2">
                 Terms of Services
               </Link>
             </div>
             <div className="footer-info">
-              <Link
-                to="https://www.linkedin.com/company/daifoundation"
-                target="_blank"
-                className="w-inline-block"
-              >
+              <Link to="https://www.linkedin.com/company/daifoundation">
                 <img
                   src="https://uploads-ssl.webflow.com/5f16c336de8961326b391c37/5f1af3bf039ee3b166bf8e02_5ef0abee113da29ef36c2998_linkedin.svg"
                   alt=""
