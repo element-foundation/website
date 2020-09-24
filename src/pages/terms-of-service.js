@@ -25,12 +25,12 @@ export default function TermsOfService() {
         </div>
       </div>
       <div className="section-line" />
-      <div id="Privacy-Policy" className="section pp">
+      <div id="Privacy-Policy" className="section dark">
         <div className="container">
-          <div className="text-img">
+          <div>
             <Box sx={{maxWidth: '1000px'}}>
-              <h2 className="heading-3 pp">Privacy Policy</h2>
-              <p className="pp">Add text here</p>
+              <h2>Privacy Policy</h2>
+              <p>Add text here</p>
             </Box>
           </div>
         </div>

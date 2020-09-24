@@ -9,7 +9,6 @@ const Button = styled.a`
   align-self: center;
   border-radius: 20px;
   background-color: #211734;
-  font-family: Mukta, sans-serif;
   color: #fff;
   font-size: 16px;
   font-weight: 400;
@@ -71,9 +70,9 @@ export default function Home() {
       <div className="section-line" />
       <div id="Purpose" className="section">
         <div className="container">
-          <div className="text-img">
+          <div>
             <Box sx={{maxWidth: "1000px"}}>
-              <h2 className="heading-3">What is the purpose of it?</h2>
+              <h2>What is the purpose of it?</h2>
               <p>
                 The Dai Foundation has been formed by the initiators of the
                 open, decentralized and permissionless MakerDAO system with the
@@ -86,13 +85,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="section noimg">
+      <div className="section dark">
         <div className="container">
           <Box sx={{maxWidth: "700px"}} css={`p {max-width: 600px;}`}>
-            <h2 style={{color: "#fff"}}>
+            <h2>
                 How does the Dai Foundation act?
             </h2>
-            <p className="left-column">
+            <p>
               The Dai Foundation will use appropriate tools to ensure that
               the Maker Protocol remains aligned with its core principles.
               More information about the principles can be found{" "}
@@ -105,11 +104,11 @@ export default function Home() {
               </a>
               .
             </p>
-            <h2 style={{color: "#fff"}}>
+            <h2>
                 What does not fall within the mandate of the Dai
                 Foundation?
             </h2>
-            <p className="left-column">
+            <p>
               It <strong>does not</strong> influence or press any personal
               agendas.
               <br />‍<br />
