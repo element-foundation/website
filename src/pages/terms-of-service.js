@@ -19,7 +19,7 @@ export default function TermsOfService() {
       <div id="Terms-of-Services" className="section tos">
         <div className="container">
             <Box sx={{maxWidth: '1000px'}}>
-              <h2 className="heading-4">Terms of Service</h2>
+              <h2>Terms of Service</h2>
               <p>Add text here</p>
             </Box>
         </div>

@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../layout"
-import { Box } from "theme-ui"
+import { Box, Grid } from "theme-ui"
 import styled from 'styled-components'
 
 const Button = styled.a`
@@ -87,38 +87,46 @@ export default function Home() {
       </div>
       <div className="section dark">
         <div className="container">
-          <Box sx={{maxWidth: "700px"}} css={`p {max-width: 600px;}`}>
-            <h2>
-                How does the Dai Foundation act?
-            </h2>
-            <p>
-              The Dai Foundation will use appropriate tools to ensure that
-              the Maker Protocol remains aligned with its core principles.
-              More information about the principles can be found{" "}
-              <a
-                href="https://forum.makerdao.com/t/announcing-the-dai-foundation/1046"
-                target="_blank"
-                className="link"
-              >
-                here
-              </a>
-              .
-            </p>
-            <h2>
-                What does not fall within the mandate of the Dai
-                Foundation?
-            </h2>
-            <p>
-              It <strong>does not</strong> influence or press any personal
-              agendas.
-              <br />‍<br />
-              It <strong>is not</strong> involved in emergency shutdown
-              procedures. However, the board of trustees aims to be
-              prepared and plan for edge-cases where the Dai Foundation
-              may need to offer support with answering related IP
-              questions.
-            </p>
-          </Box>
+          <Grid sx={{
+            gridTemplateColumns: ['90%', null, '36% 49%'],
+            gridColumnGap: '6%',
+            gridRowGap: '25px'
+          }}>
+            <div>
+              <h2>
+                  How does the Dai Foundation act?
+              </h2>
+              <p>
+                The Dai Foundation will use appropriate tools to ensure that
+                the Maker Protocol remains aligned with its core principles.
+                More information about the principles can be found{" "}
+                <a
+                  href="https://forum.makerdao.com/t/announcing-the-dai-foundation/1046"
+                  target="_blank"
+                  className="link"
+                >
+                  here
+                </a>
+                .
+              </p>
+            </div>
+            <div>
+              <h2>
+                  What does not fall within the mandate of the Dai
+                  Foundation?
+              </h2>
+              <p>
+                It <strong>does not</strong> influence or press any personal
+                agendas.
+                <br />‍<br />
+                It <strong>is not</strong> involved in emergency shutdown
+                procedures. However, the board of trustees aims to be
+                prepared and plan for edge-cases where the Dai Foundation
+                may need to offer support with answering related IP
+                questions.
+              </p>
+            </div>
+          </Grid>
         </div>
       </div>
     </Layout>
