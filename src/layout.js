@@ -3,9 +3,10 @@ import Helmet from "helmet"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import "./style.css"
-import LinkedInLogo from './images/imported/linkedin.svg'
-import { Box } from 'theme-ui'
-import styled from 'styled-components'
+import LinkedInLogo from "./images/imported/linkedin.svg"
+import PageHead from "./components/PageHead"
+import { Box } from "theme-ui"
+import styled from "styled-components"
 
 const Header = styled(Box)`
   position: fixed;
@@ -16,24 +17,24 @@ const Header = styled(Box)`
   padding-bottom: 5px;
   background-color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  
+
   .navi-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .navi-link-wrapper {
     padding-bottom: 6px;
   }
-  
+
   .navi-link {
     margin-right: 10px;
     margin-left: 10px;
     font-family: Mukta, sans-serif;
     text-decoration: none;
   }
-  
+
   @media screen and (max-width: 767px) {
     .navi-link-wrapper {
       display: none;
@@ -62,6 +63,10 @@ export default function Layout({ navLinks = [], children }) {
 
   return (
     <div>
+      <PageHead
+        title="Dai Foundation"
+        description="An independent legal entity for safeguarding the Maker community’s intellectual property."
+      />
       <Helmet>
         <link
           rel="preload"
@@ -110,9 +115,9 @@ export default function Layout({ navLinks = [], children }) {
       <div id="Footer" className="section footer">
         <div className="container">
           <div className="footer-wrapper">
-            <Box sx={{marginTop: '10px'}}>
+            <Box sx={{ marginTop: "10px" }}>
               <LogoLink />
-              <Box sx={{marginTop: '18px'}}>
+              <Box sx={{ marginTop: "18px" }}>
                 Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
               </Box>
             </Box>
@@ -126,8 +131,12 @@ export default function Layout({ navLinks = [], children }) {
                 Terms of Services
               </Link>
             </div>
-            <Box sx={{pt: '19px'}}>
-              <a href="https://www.linkedin.com/company/daifoundation" target="_blank" rel="noopener noreferrer">
+            <Box sx={{ pt: "19px" }}>
+              <a
+                href="https://www.linkedin.com/company/daifoundation"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <LinkedInLogo width="28px" height="28px" />
               </a>
             </Box>

@@ -12,7 +12,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: path.join(__dirname, `src`, 'images', 'queried'),
+        path: path.join(__dirname, `src`, "images", "queried"),
       },
     },
     `gatsby-plugin-sharp`,
@@ -25,6 +25,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-favicon`
+    `gatsby-plugin-favicon`,
   ],
 }

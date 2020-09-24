@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../layout"
 import { Box, Grid } from "theme-ui"
-import styled from 'styled-components'
+import styled from "styled-components"
 
 const Button = styled.a`
   display: inline-block;
@@ -20,7 +20,7 @@ const Hero = styled(Box)`
   background-image: url("/img/dai-foundation-background.png");
   background-position: 0 0;
   background-size: 1950px;
-  
+
   h1 {
     margin-bottom: 15px;
   }
@@ -40,34 +40,31 @@ export default function Home() {
         },
       ]}
     >
-      <Hero sx={{p: ['150px 0 110px' ,'200px 0 160px']}}>
+      <Hero sx={{ p: ["150px 0 110px", "200px 0 160px"] }}>
         <div className="container">
-          <Box sx={{maxWidth: "700px"}}>
+          <Box sx={{ maxWidth: "700px" }}>
             <h1>The Dai Foundation</h1>
-            <Box sx={{maxWidth: "600px"}}>
+            <Box sx={{ maxWidth: "600px" }}>
               <p>
                 An independent legal entity for safeguarding the Maker
                 community’s intellectual property.
               </p>
             </Box>
-            <Button href="#Dai-Foundation">
-              Learn More
-            </Button>
+            <Button href="#Dai-Foundation">Learn More</Button>
           </Box>
         </div>
       </Hero>
       <div id="Dai-Foundation" className="section">
         <div className="container">
-          <Box sx={{maxWidth: "1000px"}}>
+          <Box sx={{ maxWidth: "1000px" }}>
             <h2>What is the Dai Foundation?</h2>
             <p>
-              The Dai Foundation is an independent legal entity for
-              safeguarding the Maker community’s intellectual property (IP).
-              It was created in Denmark and operates solely on the basis of
-              objective and rigid statutes that define its mandate. In the
-              beginning of 2020, the Maker Foundation irreversibly transferred
-              the ownership of Maker and Dai trademarks to the Dai Foundation
-              for safekeeping.
+              The Dai Foundation is an independent legal entity for safeguarding
+              the Maker community’s intellectual property (IP). It was created
+              in Denmark and operates solely on the basis of objective and rigid
+              statutes that define its mandate. In the beginning of 2020, the
+              Maker Foundation irreversibly transferred the ownership of Maker
+              and Dai trademarks to the Dai Foundation for safekeeping.
             </p>
           </Box>
         </div>
@@ -76,7 +73,7 @@ export default function Home() {
       <div id="Purpose" className="section">
         <div className="container">
           <div>
-            <Box sx={{maxWidth: "1000px"}}>
+            <Box sx={{ maxWidth: "1000px" }}>
               <h2>What is the purpose of it?</h2>
               <p>
                 The Dai Foundation has been formed by the initiators of the
@@ -92,19 +89,19 @@ export default function Home() {
       </div>
       <div className="section dark">
         <div className="container">
-          <Grid sx={{
-            gridTemplateColumns: ['90%', null, '36% 49%'],
-            gridColumnGap: '6%',
-            gridRowGap: '25px'
-          }}>
+          <Grid
+            sx={{
+              gridTemplateColumns: ["90%", null, "36% 49%"],
+              gridColumnGap: "6%",
+              gridRowGap: "25px",
+            }}
+          >
             <div>
-              <h2>
-                  How does the Dai Foundation act?
-              </h2>
+              <h2>How does the Dai Foundation act?</h2>
               <p>
-                The Dai Foundation will use appropriate tools to ensure that
-                the Maker Protocol remains aligned with its core principles.
-                More information about the principles can be found{" "}
+                The Dai Foundation will use appropriate tools to ensure that the
+                Maker Protocol remains aligned with its core principles. More
+                information about the principles can be found{" "}
                 <a
                   href="https://forum.makerdao.com/t/announcing-the-dai-foundation/1046"
                   target="_blank"
@@ -117,18 +114,16 @@ export default function Home() {
             </div>
             <div>
               <h2>
-                  What does not fall within the mandate of the Dai
-                  Foundation?
+                What does not fall within the mandate of the Dai Foundation?
               </h2>
               <p>
                 It <strong>does not</strong> influence or press any personal
                 agendas.
                 <br />‍<br />
                 It <strong>is not</strong> involved in emergency shutdown
-                procedures. However, the board of trustees aims to be
-                prepared and plan for edge-cases where the Dai Foundation
-                may need to offer support with answering related IP
-                questions.
+                procedures. However, the board of trustees aims to be prepared
+                and plan for edge-cases where the Dai Foundation may need to
+                offer support with answering related IP questions.
               </p>
             </div>
           </Grid>
