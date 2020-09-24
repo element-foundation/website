@@ -24,16 +24,6 @@ const Button = styled.a`
   }
 `
 
-const Hero = styled(Box)`
-  background-image: url("/img/dai-foundation-background.png");
-  background-position: 0 0;
-  background-size: 1950px;
-
-  h1 {
-    margin-bottom: 15px;
-  }
-`
-
 export default function Home() {
   return (
     <Layout
@@ -48,10 +38,10 @@ export default function Home() {
         },
       ]}
     >
-      <Hero sx={{ p: ["150px 0 110px", "200px 0 160px"] }}>
+      <Box sx={{ p: ["150px 0 110px", "200px 0 160px"] }} className="golden-background">
         <div className="container">
           <Box sx={{ maxWidth: "700px" }}>
-            <h1>The Dai Foundation</h1>
+            <h1 style={{marginBottom: '15px'}}>The Dai Foundation</h1>
             <Box sx={{ maxWidth: "600px" }}>
               <p>
                 An independent legal entity for safeguarding the Maker
@@ -61,7 +51,7 @@ export default function Home() {
             <Button href="#Dai-Foundation">Learn More</Button>
           </Box>
         </div>
-      </Hero>
+      </Box>
       <div id="Dai-Foundation" className="section">
         <div className="container">
           <Box sx={{ maxWidth: "1000px" }}>

@@ -126,10 +126,10 @@ a {
   padding-bottom: 40px;
 }
 
-.section.tos {
-  padding-top: 100px;
-  background-image: url("/img/dai-foundation-background.png");
-  background-position: 0px 0px;
+.golden-background {
+  background: rgb(251,254,227);
+  background: url("/img/dai-foundation-background.png"), linear-gradient(153deg, rgba(251,254,227,1) 21%, rgba(255,219,133,1) 100%);
+  background-position: 0 0;
   background-size: 1950px;
   background-attachment: fixed;
 }
