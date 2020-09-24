@@ -14,6 +14,14 @@ const Button = styled.a`
   font-weight: 400;
   text-align: left;
   text-decoration: none;
+  transition: all 0.15s ease;
+  
+  position: relative;
+  top: 0;
+  :hover {
+    top: -2px;
+    background-color: #50445e;
+  }
 `
 
 const Hero = styled(Box)`

@@ -1,5 +1,5 @@
 import React from "react"
-import Helmet from "helmet"
+import Helmet from "react-helmet"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import "./style.css"
