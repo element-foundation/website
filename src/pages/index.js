@@ -14,10 +14,15 @@ const Button = styled.a`
   font-weight: 400;
   text-align: left;
   text-decoration: none;
+`
+
+const Hero = styled(Box)`
+  background-image: url("/img/dai-foundation-background.png");
+  background-position: 0 0;
+  background-size: 1950px;
   
-  @media screen and (max-width: 767px) {
-    padding: 15px 20px;
-    font-size: 18px;
+  h1 {
+    margin-bottom: 15px;
   }
 `
 
@@ -35,7 +40,7 @@ export default function Home() {
         },
       ]}
     >
-      <div id="Home" className="section hero">
+      <Hero sx={{p: ['150px 0 110px' ,'200px 0 160px']}}>
         <div className="container">
           <Box sx={{maxWidth: "700px"}}>
             <h1>The Dai Foundation</h1>
@@ -50,7 +55,7 @@ export default function Home() {
             </Button>
           </Box>
         </div>
-      </div>
+      </Hero>
       <div id="Dai-Foundation" className="section">
         <div className="container">
           <Box sx={{maxWidth: "1000px"}}>
