@@ -110,12 +110,12 @@ export default function Layout({ navLinks = [], children }) {
       <div id="Footer" className="section footer">
         <div className="container">
           <div className="footer-wrapper">
-            <div>
+            <Box sx={{marginTop: '10px'}}>
               <LogoLink />
-              <div className="text-block copyright">
+              <Box sx={{marginTop: '18px'}}>
                 Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
-              </div>
-            </div>
+              </Box>
+            </Box>
             <div>
               <Link to="/terms-of-service#Privacy-Policy" className="link-2">
                 Privacy Policy
@@ -126,11 +126,11 @@ export default function Layout({ navLinks = [], children }) {
                 Terms of Services
               </Link>
             </div>
-            <div>
+            <Box sx={{pt: '19px'}}>
               <a href="https://www.linkedin.com/company/daifoundation" target="_blank" rel="noopener noreferrer">
-                <LinkedInLogo />
+                <LinkedInLogo width="28px" height="28px" />
               </a>
-            </div>
+            </Box>
           </div>
         </div>
       </div>

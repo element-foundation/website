@@ -167,15 +167,9 @@ a {
   font-weight: 400;
 }
 
-.text-block {
-  margin-top: 24px;
-  color: #000;
-  font-size: 16px;
-}
-
 .footer-wrapper {
   display: flex;
-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .image-2 {
