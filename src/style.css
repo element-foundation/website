@@ -110,7 +110,6 @@ a {
 }
 
 .section {
-  position: static;
   padding-top: 78px;
   padding-bottom: 177px;
   background-color: #fff;
@@ -124,14 +123,6 @@ a {
 .section.footer {
   padding-top: 25px;
   padding-bottom: 40px;
-}
-
-.golden-background {
-  background: rgb(251,254,227);
-  background: url("/img/dai-foundation-background.png"), linear-gradient(153deg, rgba(251,254,227,1) 21%, rgba(255,219,133,1) 100%);
-  background-position: 0 0;
-  background-size: 1950px;
-  background-attachment: fixed;
 }
 
 .section-line {

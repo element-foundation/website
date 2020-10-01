@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../layout"
 import { Box, Grid } from "theme-ui"
 import styled from "styled-components"
+import GoldenBackground from "../components/GoldenBackground"
 
 const Button = styled.a`
   display: inline-block;
@@ -38,7 +39,7 @@ export default function Home() {
         },
       ]}
     >
-      <Box sx={{ p: ["150px 0 110px", "200px 0 160px"] }} className="golden-background">
+      <GoldenBackground sx={{ p: ["150px 0 110px", "200px 0 160px"] }}>
         <div className="container">
           <Box sx={{ maxWidth: "700px" }}>
             <h1 style={{marginBottom: '15px'}}>The Dai Foundation</h1>
@@ -51,7 +52,7 @@ export default function Home() {
             <Button href="#Dai-Foundation">Learn More</Button>
           </Box>
         </div>
-      </Box>
+      </GoldenBackground>
       <div id="Dai-Foundation" className="section">
         <div className="container">
           <Box sx={{ maxWidth: "1000px" }}>
