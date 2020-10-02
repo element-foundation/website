@@ -47,7 +47,7 @@ export default function Layout({ navLinks = [], children }) {
     query {
       file(relativePath: { eq: "Dai_foundation_colour.png" }) {
         childImageSharp {
-          fixed(width: 250, quality: 100) {
+          fixed(width: 251, quality: 100) {
             ...GatsbyImageSharpFixed
           }
         }
