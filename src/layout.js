@@ -29,6 +29,7 @@ const Header = styled(Box)`
   }
 
   .navi-link {
+    cursor: pointer;
     margin-right: 10px;
     margin-left: 10px;
     font-family: Mukta, sans-serif;
@@ -42,7 +43,7 @@ const Header = styled(Box)`
   }
 `
 
-export default function Layout({ navLinks = [], children }) {
+const LogoLink = () => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "Dai_foundation_colour.png" }) {
@@ -55,12 +56,18 @@ export default function Layout({ navLinks = [], children }) {
     }
   `)
 
-  const LogoLink = () => (
+  return (
     <Link to="/">
-      <Img fixed={data.file.childImageSharp.fixed} alt="Dai Foundation" />
+      <Img fixed={data.file.childImageSharp.fixed} alt="Dai Foundation"/>
     </Link>
   )
+}
 
+export default function Layout({ navLinks = [], scrollToHash, children }) {
+  if (!scrollToHash) {
+    // Use propTypes if more props are required; this would suffice for now.
+    throw new Error('scrollToHash prop is required in Layout component')
+  }
   return (
     <div>
       <PageHead
@@ -102,10 +109,13 @@ export default function Layout({ navLinks = [], children }) {
           <div className="navi-wrapper">
             <LogoLink />
             <div className="navi-link-wrapper">
-              {[{ text: "Home", url: "/" }, ...navLinks].map(link => (
-                <Link to={link.url} className="navi-link">
+              <Link to="/" className="navi-link">
+                Home
+              </Link>
+              {navLinks.map(link => (
+                <span onClick={() => scrollToHash(link.url)} className="navi-link">
                   {link.text}
-                </Link>
+                </span>
               ))}
             </div>
           </div>

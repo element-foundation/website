@@ -3,8 +3,9 @@ import Layout from "../layout"
 import { Box, Grid } from "theme-ui"
 import styled from "styled-components"
 import GoldenBackground from "../components/GoldenBackground"
+import useScrollToHash from "../useScrollToHash"
 
-const Button = styled.a`
+const Button = styled.div`
   display: inline-block;
   padding: 10px 20px;
   align-self: center;
@@ -16,7 +17,7 @@ const Button = styled.a`
   text-align: left;
   text-decoration: none;
   transition: all 0.15s ease;
-  
+  cursor: pointer;
   position: relative;
   top: 0;
   :hover {
@@ -25,7 +26,9 @@ const Button = styled.a`
   }
 `
 
-export default function Home() {
+export default function Home({location}) {
+  const scrollToHash = useScrollToHash(location.hash)
+
   return (
     <Layout
       navLinks={[
@@ -38,6 +41,7 @@ export default function Home() {
           url: "#Purpose",
         },
       ]}
+      scrollToHash={scrollToHash}
     >
       <GoldenBackground sx={{ p: ["150px 0 110px", "200px 0 160px"] }}>
         <div className="container">
@@ -49,7 +53,7 @@ export default function Home() {
                 community’s intellectual property.
               </p>
             </Box>
-            <Button href="#Dai-Foundation">Learn More</Button>
+            <Button onClick={() => scrollToHash('#Dai-Foundation')}>Learn More</Button>
           </Box>
         </div>
       </GoldenBackground>

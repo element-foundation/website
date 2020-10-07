@@ -2,8 +2,11 @@ import React from "react"
 import Layout from "../layout"
 import { Box } from "theme-ui"
 import GoldenBackground from "../components/GoldenBackground"
+import useScrollToHash from "../useScrollToHash"
 
-export default function TermsOfService() {
+export default function TermsOfService({location}) {
+  const scrollToHash = useScrollToHash(location.hash)
+
   return (
     <Layout
       navLinks={[
@@ -16,6 +19,7 @@ export default function TermsOfService() {
           url: "#Privacy-Policy",
         },
       ]}
+      scrollToHash={scrollToHash}
     >
       <GoldenBackground>
         <div id="Terms-of-Services" className="section" style={{paddingTop: '100px', background: 'none'}}>
