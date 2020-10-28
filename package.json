@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "dai-foundation-website",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Official Dai Foundation website.",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
