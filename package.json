@@ -2,7 +2,7 @@
   "name": "dai-foundation-website",
   "private": true,
   "description": "Official Dai Foundation website.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
