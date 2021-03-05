@@ -3,8 +3,9 @@ import Layout from "../layout"
 import { Box } from "theme-ui"
 import GoldenBackground from "../components/GoldenBackground"
 import useScrollToHash from "../useScrollToHash"
+import { graphql } from "gatsby"
 
-export default function TermsOfService({location}) {
+export default function TermsOfService({location, data}) {
   const scrollToHash = useScrollToHash(location.hash)
 
   return (
@@ -25,8 +26,7 @@ export default function TermsOfService({location}) {
         <div id="Terms-of-Services" className="section" style={{paddingTop: '100px', background: 'none'}}>
           <div className="container">
             <Box sx={{ maxWidth: "1000px" }}>
-              <h2>Terms of Service</h2>
-              <p>Add text here</p>
+              <div dangerouslySetInnerHTML={{ __html: data.tos.html }} />
             </Box>
           </div>
         </div>
@@ -46,3 +46,11 @@ export default function TermsOfService({location}) {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query TosQuery {
+    tos: markdownRemark {
+      html
+    }
+  }
+`
