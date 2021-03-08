@@ -1,5 +1,9 @@
 ## Terms of Service
 
+Please read these Terms of Service before using daifoundation.org and oasisdex.com websites (the "**Websites**").
+
+Last revised: 8 March 2021
+
 ### Acceptance of the Terms
 
 These Terms of Service are entered into by and between you and the Dai Fonden ("Dai Foundation", "we" or "us"). The following terms and conditions, together with any documents they expressly incorporate by reference (collectively, this "**Terms**"), govern your access to and use of any content, functionality and services, including mobile applications, web applications, decentralized applications, smart contracts and API, offered on or through the Websites.
@@ -30,11 +34,11 @@ You agree that all information you provide at the Websites or otherwise, includi
 
 ### Intellectual Property Rights
 
-Except as otherwise provided, Content on this site, including all materials posted by the Dai Foundation, is licensed under a [Creative Commons Attribution 4.0 License](http://creativecommons.org/licenses/by/3.0/).
+The Websites and its entire contents (including MakerDAO Intangible Assets), features and functionality (including but not limited to all information, software, text, displays, images, video and audio, and the design, selection and arrangement thereof), are owned by the Dai Foundation, its licensors or other providers of such material and are protected by copyright, trademark, patent, trade secret and other intellectual property or proprietary rights laws.
 
-All logos and trademarks contained on this Web site are and remain the property of their respective owners. No licenses or other rights in or to such logos and/or trademarks are granted.
+Some of the MakerDAO Intangible Assets may be offered under an open source license that we will make available to you. If that is the case, a license notice is made available to you in a relevant software repository or part of the Websites.
 
-Except as otherwise expressly stated, by providing the Content, neither the Dai Foundation nor the Members grant any licenses to any copyrights, patents or any other intellectual property rights.
+The Dai Foundation name, the names MakerDAO, Dai, Maker, OasisDEX, Oasis Protocol, the Maker and Dai logotypes and all related names, logos, product and service names, designs and slogans are trademarks of the Dai Foundation. You must not use such marks without the prior written permission of the Dai Foundation. All other names, logos, product and service names, designs and slogans on this Websites are the trademarks of their respective owners. Please refer to our Trademark Policy for details.
 
 ### Prohibited Uses
 
@@ -128,4 +132,4 @@ The Terms and Privacy Policy constitute the sole and entire agreement between yo
 
 ### Your Comments and Concerns
 
-These Websites are operated by the Dai Foundation. All other feedback, comments, requests for technical support and other communications relating to the Websites should be directed to: [support@daifoundation.org](mailto:support@daifoundation.org).
+These Websites are operated by the Dai Foundation. All other feedback, comments, requests for technical support and other communications relating to the Websites should be directed to: [support@daifoundation.org](mailto:support@daifoundation.org)
