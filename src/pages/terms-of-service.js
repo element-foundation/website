@@ -3,13 +3,29 @@ import Layout from "../layout"
 import { Box } from "theme-ui"
 import GoldenBackground from "../components/GoldenBackground"
 import useScrollToHash from "../useScrollToHash"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 export default function TermsOfService({location, data}) {
   const scrollToHash = useScrollToHash(location.hash)
 
   return (
-    <Layout scrollToHash={scrollToHash}>
+    <Layout
+      navLinks={[
+        {
+          text: "The Dai Foundation",
+          url: "/#Dai-Foundation",
+        },
+        {
+          text: "Purpose",
+          url: "/#Purpose",
+        },
+      ].map(link => (
+        <Link to={link.url} className="navi-link">
+          {link.text}
+        </Link>
+      ))}
+      scrollToHash={scrollToHash}
+    >
       <GoldenBackground>
         <div id="Terms-of-Service" className="section" style={{paddingTop: '100px', background: 'none'}}>
           <div className="container">

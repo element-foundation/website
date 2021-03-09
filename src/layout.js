@@ -112,11 +112,7 @@ export default function Layout({ navLinks = [], scrollToHash, children }) {
               <Link to="/" className="navi-link">
                 Home
               </Link>
-              {navLinks.map(link => (
-                <span onClick={() => scrollToHash(link.url)} className="navi-link">
-                  {link.text}
-                </span>
-              ))}
+              {navLinks}
             </div>
           </div>
         </div>
