@@ -132,13 +132,8 @@ export default function Layout({ navLinks = [], scrollToHash, children }) {
               </Box>
             </Box>
             <div>
-              <Link to="/terms-of-service#Privacy-Policy" className="link-2">
-                Privacy Policy
-              </Link>
-            </div>
-            <div>
-              <Link to="/terms-of-service#Terms-of-Services" className="link-2">
-                Terms of Services
+              <Link to="/terms-of-service#Terms-of-Service" className="link-2">
+                Terms of Service
               </Link>
             </div>
             <Box sx={{ pt: "19px" }}>
