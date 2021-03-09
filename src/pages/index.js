@@ -40,7 +40,11 @@ export default function Home({location}) {
           text: "Purpose",
           url: "#Purpose",
         },
-      ]}
+      ].map(link => (
+        <span onClick={() => scrollToHash(link.url)} className="navi-link">
+          {link.text}
+        </span>
+      ))}
       scrollToHash={scrollToHash}
     >
       <GoldenBackground sx={{ p: ["150px 0 110px", "200px 0 160px"] }}>
