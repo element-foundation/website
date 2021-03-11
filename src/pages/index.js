@@ -21,10 +21,19 @@ const Button = styled.div`
   position: relative;
   top: 0;
   :hover {
-    top: -2px;
     background-color: #50445e;
   }
 `
+
+function Section(props) {
+  return <div className="section" {...props}>
+    <div className="container">
+      <Box sx={{ maxWidth: "1000px" }}>
+        {props.children}
+      </Box>
+    </div>
+  </div>
+}
 
 export default function Home({location}) {
   const scrollToHash = useScrollToHash(location.hash)
@@ -61,39 +70,37 @@ export default function Home({location}) {
           </Box>
         </div>
       </GoldenBackground>
-      <div id="Dai-Foundation" className="section">
-        <div className="container">
-          <Box sx={{ maxWidth: "1000px" }}>
-            <h2>What is the Dai Foundation?</h2>
-            <p>
-              The Dai Foundation is an independent legal entity for safeguarding
-              the Maker community’s intellectual property (IP). It was created
-              in Denmark and operates solely on the basis of objective and rigid
-              statutes that define its mandate. In the beginning of 2020, the
-              Maker Foundation irreversibly transferred the ownership of Maker
-              and Dai trademarks to the Dai Foundation for safekeeping.
-            </p>
-          </Box>
-        </div>
-      </div>
+      <Section id="Dai-Foundation">
+        <h2>What is the Dai Foundation?</h2>
+        <p>
+          The Dai Foundation is an independent legal entity for safeguarding
+          the Maker community’s intellectual property (IP). It was created
+          in Denmark and operates solely on the basis of objective and rigid
+          statutes that define its mandate. In the beginning of 2020, the
+          Maker Foundation irreversibly transferred the ownership of Maker
+          and Dai trademarks to the Dai Foundation for safekeeping.
+        </p>
+      </Section>
       <div className="section-line" />
-      <div id="Purpose" className="section">
-        <div className="container">
-          <div>
-            <Box sx={{ maxWidth: "1000px" }}>
-              <h2>What is the purpose of it?</h2>
-              <p>
-                The Dai Foundation has been formed by the initiators of the
-                open, decentralized and permissionless MakerDAO system with the
-                virtual currency Dai. Its purpose is to safeguard what cannot be
-                technologically decentralized in the Maker Protocol which
-                includes trademarks and other intellectual property, such as
-                open-source copyrights and other relevant assets.
-              </p>
-            </Box>
-          </div>
-        </div>
-      </div>
+      <Section id="Purpose">
+        <h2>What is the purpose of it?</h2>
+        <p>
+          The Dai Foundation has been formed by the initiators of the
+          open, decentralized and permissionless MakerDAO system with the
+          virtual currency Dai. Its purpose is to safeguard what cannot be
+          technologically decentralized in the Maker Protocol which
+          includes trademarks and other intellectual property, such as
+          open-source copyrights and other relevant assets.
+        </p>
+      </Section>
+      <div className="section-line" />
+      <Section>
+        <h2>Who is on the board?</h2>
+        <p>
+          To see who is on the board of Dai Foundation click{" "}
+          <a href="https://cvrapi.dk/virksomhed/dk/dai-fonden/40645799" target="_blank" rel="noopener noreferrer">here</a>.
+        </p>
+      </Section>
       <div className="section dark">
         <div className="container">
           <Grid
