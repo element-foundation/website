@@ -97,7 +97,7 @@ export default function Home({location}) {
       <Section>
         <h2>Who is on the board?</h2>
         <p>
-          To see who is on the board of Dai Foundation click{" "}
+          To see who is on the board of the Dai Foundation click{" "}
           <a href="https://cvrapi.dk/virksomhed/dk/dai-fonden/40645799" target="_blank" rel="noopener noreferrer">here</a>.
         </p>
       </Section>
