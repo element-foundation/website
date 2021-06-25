@@ -2,7 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import "./style.css"
+import "./fonts.css"
 import LinkedInLogo from "./images/imported/linkedin.svg"
 import PageHead from "./components/PageHead"
 import { Box } from "theme-ui"
@@ -39,7 +39,18 @@ export default function Layout({ navLinks = [], scrollToHash, children }) {
         description="An independent legal entity for safeguarding the Maker community’s intellectual property."
       />
       <Helmet>
-
+        {
+          ['Bold', 'BoldItalic', 'Italic', 'Regular'].map(fontType => {
+            const extensions = ['woff', 'woff2']
+            return extensions.map(ext => (<link
+              rel="preload"
+              as="font"
+              href={`/fonts/Acumin Pro/AcuminPro-${fontType}.${ext}`}
+              type={`font/${ext}`}
+              crossOrigin="anonymous"
+            />) )
+          })
+        }
       </Helmet>
       <Header>
         <div className="container">
