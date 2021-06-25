@@ -75,34 +75,7 @@ export default function Layout({ navLinks = [], scrollToHash, children }) {
         description="An independent legal entity for safeguarding the Maker community’s intellectual property."
       />
       <Helmet>
-        <link
-          rel="preload"
-          as="font"
-          href="/fonts/Mukta/Mukta-Regular.woff2"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          as="font"
-          href="/fonts/Mukta/Mukta-Regular.woff"
-          type="font/woff"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          as="font"
-          href="/fonts/Mukta/Mukta-Bold.woff2"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          as="font"
-          href="/fonts/Mukta/Mukta-Bold.woff"
-          type="font/woff"
-          crossOrigin="anonymous"
-        />
+
       </Helmet>
       <Header>
         <div className="container">
