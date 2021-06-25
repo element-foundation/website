@@ -6,42 +6,6 @@ import "./style.css"
 import LinkedInLogo from "./images/imported/linkedin.svg"
 import PageHead from "./components/PageHead"
 import { Box } from "theme-ui"
-import styled from "styled-components"
-
-const Header = styled(Box)`
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 99;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  background-color: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-  .navi-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .navi-link-wrapper {
-    padding-bottom: 6px;
-  }
-
-  .navi-link {
-    cursor: pointer;
-    margin-right: 10px;
-    margin-left: 10px;
-    font-family: Mukta, sans-serif;
-    text-decoration: none;
-  }
-
-  @media screen and (max-width: 767px) {
-    .navi-link-wrapper {
-      display: none;
-    }
-  }
-`
 
 const LogoLink = () => {
   const data = useStaticQuery(graphql`
