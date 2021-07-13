@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../layout"
 import useScrollToHash from "../useScrollToHash"
 import { graphql, Link } from "gatsby"
+import { Box } from 'theme-ui'
 
 export default function TermsOfService({location, data}) {
   const scrollToHash = useScrollToHash(location.hash)
@@ -18,20 +19,20 @@ export default function TermsOfService({location, data}) {
           url: "/#Purpose",
         },
       ].map(link => (
-        <Link to={link.url} className="navi-link">
+        <Link to={link.url}>
           {link.text}
         </Link>
       ))}
       scrollToHash={scrollToHash}
     >
-        <div id="Terms-of-Service" className="section" style={{paddingTop: '100px', background: 'none'}}>
-          <div className="container">
+        <div id="Terms-of-Service" style={{paddingTop: '100px', background: 'none'}}>
+          <div>
             <Box sx={{ maxWidth: "1000px" }}>
               <div dangerouslySetInnerHTML={{ __html: data.tos.html }} />
             </Box>
           </div>
         </div>
-      <div className="section-line" />
+      <div />
     </Layout>
   )
 }

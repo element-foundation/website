@@ -18,13 +18,13 @@ export default function Home({location}) {
           url: "#Purpose",
         },
       ].map(link => (
-        <span onClick={() => scrollToHash(link.url)} className="navi-link">
+        <span onClick={() => scrollToHash(link.url)}>
           {link.text}
         </span>
       ))}
       scrollToHash={scrollToHash}
     >
-
+      <h1>Hello World</h1>
     </Layout>
   )
 }

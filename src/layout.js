@@ -5,27 +5,10 @@ import Img from "gatsby-image"
 import "./fonts.css"
 import LinkedInLogo from "./images/imported/linkedin.svg"
 import PageHead from "./components/PageHead"
-import { Box } from "theme-ui"
+import { Box, ThemeProvider } from "theme-ui"
 
-const LogoLink = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "Dai_foundation_colour.png" }) {
-        childImageSharp {
-          fixed(width: 251, quality: 100) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
+import theme from './theme'
 
-  return (
-    <Link to="/">
-      <Img fixed={data.file.childImageSharp.fixed} alt="Dai Foundation"/>
-    </Link>
-  )
-}
 
 export default function Layout({ navLinks = [], scrollToHash, children }) {
   if (!scrollToHash) {
@@ -52,46 +35,44 @@ export default function Layout({ navLinks = [], scrollToHash, children }) {
           })
         }
       </Helmet>
-      <Header>
-        <div className="container">
-          <div className="navi-wrapper">
-            <LogoLink />
-            <div className="navi-link-wrapper">
-              <Link to="/" className="navi-link">
+      <ThemeProvider theme={theme}>
+        <div>
+          <div>
+            <div>
+              <Link to="/">
                 Home
               </Link>
               {navLinks}
             </div>
           </div>
         </div>
-      </Header>
-      {children}
-      <div id="Footer" className="section footer">
-        <div className="container">
-          <div className="footer-wrapper">
-            <Box sx={{ marginTop: "10px" }}>
-              <LogoLink />
-              <Box sx={{ marginTop: "18px" }}>
-                Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
-              </Box>
-            </Box>
+        {children}
+        <div id="Footer">
+          <div>
             <div>
-              <Link to="/terms-of-service#Terms-of-Service" className="link-2">
-                Terms of Service
-              </Link>
+              <Box sx={{ marginTop: "10px" }}>
+                <Box sx={{ marginTop: "18px" }}>
+                  Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+                </Box>
+              </Box>
+              <div>
+                <Link to="/terms-of-service#Terms-of-Service">
+                  Terms of Service
+                </Link>
+              </div>
+              <Box sx={{ pt: "19px" }}>
+                <a
+                  href="https://www.linkedin.com/company/daifoundation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkedInLogo width="28px" height="28px" />
+                </a>
+              </Box>
             </div>
-            <Box sx={{ pt: "19px" }}>
-              <a
-                href="https://www.linkedin.com/company/daifoundation"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkedInLogo width="28px" height="28px" />
-              </a>
-            </Box>
           </div>
         </div>
-      </div>
+      </ThemeProvider>
     </div>
   )
 }
