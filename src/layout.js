@@ -10,7 +10,7 @@ import { Box, ThemeProvider } from "theme-ui"
 import theme from './theme'
 
 
-export default function Layout({ navLinks = [], children }) {
+export default function Layout({ navLinks = [], children, surfaceColor }) {
   return (
     <div>
       <PageHead
@@ -42,7 +42,7 @@ export default function Layout({ navLinks = [], children }) {
             </div>
           </div>
         </div>
-        <Box sx={{background: "background"}}>
+        <Box sx={{backgroundColor: `surface.${surfaceColor || 'gray'}`}}>
           {children}
         </Box>
         <div id="Footer">

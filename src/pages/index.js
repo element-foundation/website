@@ -6,7 +6,7 @@ import HtmlContent from "../components/HtmlContent"
 
 export default function Home({location}) {
   return (
-    <Layout tabPage="about">
+    <Layout tabPage="about" surfaceColor="gray">
       <Heading>{content.about.title}</Heading>
       <HtmlContent page="about" />
     </Layout>

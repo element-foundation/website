@@ -1,6 +1,14 @@
 
 
 const theme = {
+  colors: {
+    surface: {
+      gray: '#DAD7D1',
+      gold: '#FBE38E',
+      conch: '#CADAD2'
+    },
+    background: "#FFF"
+  },
   fonts: {
     body: 'Acumin Pro, system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
   },
@@ -20,11 +28,20 @@ const theme = {
     heading: 1.125,
   },
   text: {
+    default: {
+      fontFamily: 'body',
+      lineHeight: 'body',
+      fontWeight: 'body',
+    },
     heading: {
       fontFamily: 'body',
       lineHeight: 'heading',
       fontWeight: 'heading',
     },
+    ethAddress: {
+      variant: 'text.default',
+      fontSize: '20px',
+    }
   },
   styles: {
     root: {
