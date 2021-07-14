@@ -10,11 +10,7 @@ import { Box, ThemeProvider } from "theme-ui"
 import theme from './theme'
 
 
-export default function Layout({ navLinks = [], scrollToHash, children }) {
-  if (!scrollToHash) {
-    // Use propTypes if more props are required; this would suffice for now.
-    throw new Error('scrollToHash prop is required in Layout component')
-  }
+export default function Layout({ navLinks = [], children }) {
   return (
     <div>
       <PageHead

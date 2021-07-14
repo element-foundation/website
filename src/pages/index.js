@@ -1,11 +1,9 @@
 import React from "react"
 import Layout from "../layout"
-import useScrollToHash from "../useScrollToHash"
+import { Text, Heading } from "theme-ui"
 
 
 export default function Home({location}) {
-  const scrollToHash = useScrollToHash(location.hash)
-
   return (
     <Layout
       navLinks={[
@@ -18,13 +16,14 @@ export default function Home({location}) {
           url: "#Purpose",
         },
       ].map(link => (
-        <span onClick={() => scrollToHash(link.url)}>
+        <span>
           {link.text}
         </span>
       ))}
       scrollToHash={scrollToHash}
     >
-      <h1>Hello World</h1>
+      <Heading>Hello World</Heading>
+      <Text sx={{fontWeight: 'heading', fontSize: 'l'}}>asdf</Text>
     </Layout>
   )
 }

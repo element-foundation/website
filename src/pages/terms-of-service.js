@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../layout"
-import useScrollToHash from "../useScrollToHash"
 import { graphql, Link } from "gatsby"
 import { Box } from 'theme-ui'
 
@@ -23,7 +22,6 @@ export default function TermsOfService({location, data}) {
           {link.text}
         </Link>
       ))}
-      scrollToHash={scrollToHash}
     >
         <div id="Terms-of-Service" style={{paddingTop: '100px', background: 'none'}}>
           <div>
