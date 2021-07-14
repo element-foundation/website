@@ -4,8 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-const path = require(`path`)
-
 module.exports = {
   plugins: [
     {
@@ -23,8 +21,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {
@@ -33,6 +29,5 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-favicon`,
   ],
 }

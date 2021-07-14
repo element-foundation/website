@@ -42,7 +42,9 @@ export default function Layout({ navLinks = [], children }) {
             </div>
           </div>
         </div>
-        {children}
+        <Box sx={{background: "background"}}>
+          {children}
+        </Box>
         <div id="Footer">
           <div>
             <div>

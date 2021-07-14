@@ -21,7 +21,7 @@
     "title": "Mandate",
     "body": "The Dai Foundation has been formed as an independent and non-profit-oriented entity by the initiators of the open, decentralized and permissionless MakerDAO system with the virtual currency Dai. Its mandate is to safeguard what cannot be technologically decentralized in the Maker Protocol which includes trademarks and other intellectual property, such as open-source copyrights and other relevant [assets](/assets)."
   },
-  "donate": {
+  "donations": {
     "title": "Donate to support the work of Dai Foundation.",
     "body": "Dai Foundation accept donations in any liquid assets on the Ethereum Blockchain sent to the following wallet address:",
     "disclaimer": "See the Dai Foundation [policy](/terms-or-service) for accepting crypto donations",
@@ -38,6 +38,6 @@
   },
   "principles": {
     "title": "Principles",
-    "content": "There could be situations that result in a misuse of the intellectual property, brand assets and goodwill that the community has accrued over the years. In such case, the Dai Foundation will use appropriate tools to ensure that the Maker Protocol remains aligned with its core principles. \n\n    These principles include: \n    \n    ∙ The protocol must be available free of charge, as open source and without restrictions, on equal terms and for anyone. \n    There must be a high degree of access and distribution to the unbanked and financially underserved. \n    \n    The governance of the protocol must take a sustainable approach, and no harmful centralization of the protocol must happen. \n    \n    Development of the protocol must be in compliance with the legislation in force at any time. \n    \n    The protocol must be operated using scientific governance that optimizes long term stability, assures diversification of the collateral portfolio, and benefit of Dai users. \n    \n    In practice the intent is that the community can freely use Dai trademarks, but abuse by scammers is prohibited, and that malicious attackers of the Protocol are not allowed to mislead users of the Protocol.\n"
+    "body": "There could be situations that result in a misuse of the intellectual property, brand assets and goodwill that the community has accrued over the years. In such case, the Dai Foundation will use appropriate tools to ensure that the Maker Protocol remains aligned with its core principles. \n \n  These principles include: \n \n  The protocol must be available free of charge, as open source and without restrictions, on equal terms and for anyone. \n There must be a high degree of access and distribution to the unbanked and financially underserved. \n  \n The governance of the protocol must take a sustainable approach, and no harmful centralization of the protocol must happen. \n \n  Development of the protocol must be in compliance with the legislation in force at any time. \n \n The protocol must be operated using scientific governance that optimizes long term stability, assures diversification of the collateral portfolio, and benefit of Dai users. \n \n In practice the intent is that the community can freely use Dai trademarks, but abuse by scammers is prohibited, and that malicious attackers of the Protocol are not allowed to mislead users of the Protocol."
   }
 }
