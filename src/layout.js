@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import "./fonts.css"
 import LinkedInLogo from "./images/imported/linkedin.svg"
 import PageHead from "./components/PageHead"
-import { Box, Container, Flex, ThemeProvider } from "theme-ui"
+import { Box, Container, Image, Flex, Text, ThemeProvider } from "theme-ui"
 import content from "./content.json"
 
 import theme from './theme'
@@ -34,6 +34,10 @@ const tabLinks = [
   }
 ]
 
+const Nav = ({href, children}) => <Link to={href} style={{textDecoration: 'none'}}>
+  <Text variant="nav">{children}</Text>
+</Link>
+
 export default function Layout({ children, tabPage, surfaceColor }) {
   return (
     <div>
@@ -56,13 +60,26 @@ export default function Layout({ children, tabPage, surfaceColor }) {
         }
       </Helmet>
       <ThemeProvider theme={theme}>
-        <Box>
-          <Flex>
-            <Box>(logo and site name)</Box>
-            <Box>
-              <Link to="/">{navTitles.about}</Link>
-              <Link to="/donations">{navTitles.donations}</Link>
-              <Link to="/contact">{navTitles.contact}</Link>
+        <Container>
+          <Flex sx={{
+            alignItems: 'center', 
+            justifyContent: 'space-between',
+            py: '51px'
+          }}
+          >
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              <Flex sx={{alignItems: 'center'}}>
+                <Image src="/img/logo.svg" sx={{mr: '17px'}}/>
+                <Text variant="logo" sx={{ position: 'relative', top: '2px'}}>The Dai Foundation</Text>
+              </Flex>
+            </Link>
+            <Box sx={{ '& > *': {
+                ml: '47px'
+              }
+            }}>
+              <Nav href="/">{navTitles.about}</Nav>
+              <Nav href="/donations">{navTitles.donations}</Nav>
+              <Nav href="/contact">{navTitles.contact}</Nav>
             </Box>
           </Flex>
           <Box>
@@ -71,7 +88,7 @@ export default function Layout({ children, tabPage, surfaceColor }) {
               </Link>)
             }
           </Box>
-        </Box>
+        </Container>
         <Box sx={{backgroundColor: `surface.${surfaceColor || 'gray'}`}}>
           <Container>
             {children}

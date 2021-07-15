@@ -7,7 +7,9 @@ const theme = {
       gold: '#FBE38E',
       conch: '#CADAD2'
     },
-    background: "#FFF"
+    background: "#FFF",
+    primary: '#111',
+    text: '#333'
   },
   fonts: {
     body: 'Acumin Pro, system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
@@ -45,6 +47,11 @@ const theme = {
       fontFamily: 'body',
       fontSize: '26px',
       fontWeight: 'bold',
+      color: 'primary',
+    },
+    nav: {
+      fontSize: 's',
+      color: 'text'
     }
   },
   layout: {
