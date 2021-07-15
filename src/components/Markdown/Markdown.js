@@ -2,8 +2,8 @@ import React from 'react'
 import { useStaticQuery } from 'gatsby'
 
 
-// Content is converted from markdown to html in /gatsby-node.js
-export default function HtmlContent({page}) {
+// Content is converted from markdown to html in ./sourceNodes.js
+export default function Markdown({page}) {
   const data = useStaticQuery(
     graphql`
       query HtmlContentQuery {
