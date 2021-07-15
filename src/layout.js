@@ -85,13 +85,13 @@ export default function Layout({ children, tabPage, surfaceColor }) {
           </Flex>
           <Box sx={{ '& > *': { mr: '36px' }, pb: '28px' }}>
             {tabPage && tabLinks.map(link => 
-              <Nav href={link.url} sx={link.title.toLowerCase() === tabPage ? { borderBottom: '2.4px solid'}:{}}>
+              <Nav href={link.url} sx={link.title.toLowerCase() === tabPage ? { '&, &:hover': {borderBottom: '2.4px solid', borderColor: 'primary'}}:{}}>
                 {link.title}
               </Nav>)
             }
           </Box>
         </Container>
-        <Box sx={{backgroundColor: `surface.${surfaceColor || 'gray'}`}}>
+        <Box sx={{backgroundColor: `surface.${surfaceColor || 'gray'}`, py: '55px'}}>
           <Container>
             {children}
           </Container>

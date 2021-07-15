@@ -54,7 +54,8 @@ const theme = {
       color: 'text',
       borderColor: 'text',
       ':hover': {
-        color: 'primary'
+        color: 'primary',
+        borderBottom: '2px solid #ddd'
       }
     }
   },
