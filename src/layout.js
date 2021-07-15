@@ -59,10 +59,14 @@ export default function Layout({ children, tabPage, surfaceColor }) {
         <Box>
           <Flex>
             <Box>(logo and site name)</Box>
-            <Box>(top right nav)</Box>
+            <Box>
+              <Link to="/">About</Link>
+              <Link to="/donations">Donations</Link>
+              <Link to="/contact">Contact</Link>
+            </Box>
           </Flex>
           <Box>
-            {tabLinks.map(link => <Link to={link.url}>
+            {tabPage && tabLinks.map(link => <Link to={link.url}>
                 {link.title}{link.title.toLowerCase() === tabPage ? '*' : ''}
               </Link>)
             }
