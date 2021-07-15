@@ -2,9 +2,10 @@ import React from "react"
 import Helmet from "react-helmet"
 import { Link } from "gatsby"
 import "./fonts.css"
+import MainLogo from "./images/imported/logo.svg"
 import LinkedInLogo from "./images/imported/linkedin.svg"
 import PageHead from "./components/PageHead"
-import { Box, Container, Image, Flex, Text, ThemeProvider } from "theme-ui"
+import { Box, Container, Flex, Text, ThemeProvider } from "theme-ui"
 import content from "./content.json"
 
 import theme from './theme'
@@ -69,7 +70,7 @@ export default function Layout({ children, tabPage, surfaceColor }) {
           >
             <Link to="/" style={{ textDecoration: 'none' }}>
               <Flex sx={{alignItems: 'center'}}>
-                <Image src="/img/logo.svg" sx={{mr: '17px'}}/>
+                <MainLogo style={{ marginRight: '17px'}} />
                 <Text variant="logo" sx={{ position: 'relative', top: '2px'}}>The Dai Foundation</Text>
               </Flex>
             </Link>
