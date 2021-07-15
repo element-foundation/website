@@ -20,7 +20,6 @@ const theme = {
   },
   fontWeights: {
     body: 400,
-    heading: 700,
     bold: 700,
   },
   lineHeights: {
@@ -36,11 +35,21 @@ const theme = {
     heading: {
       fontFamily: 'body',
       lineHeight: 'heading',
-      fontWeight: 'heading',
+      fontWeight: 'body',
     },
     ethAddress: {
       variant: 'text.default',
       fontSize: '20px',
+    },
+    logo: {
+      fontFamily: 'body',
+      fontSize: '26px',
+      fontWeight: 'bold',
+    }
+  },
+  layout: {
+    container: {
+      maxWidth: '1160px'
     }
   },
   styles: {

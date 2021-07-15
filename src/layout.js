@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import "./fonts.css"
 import LinkedInLogo from "./images/imported/linkedin.svg"
 import PageHead from "./components/PageHead"
-import { Box, Flex, ThemeProvider } from "theme-ui"
+import { Box, Container, Flex, ThemeProvider } from "theme-ui"
 import content from "./content.json"
 
 import theme from './theme'
@@ -73,7 +73,9 @@ export default function Layout({ children, tabPage, surfaceColor }) {
           </Box>
         </Box>
         <Box sx={{backgroundColor: `surface.${surfaceColor || 'gray'}`}}>
-          {children}
+          <Container>
+            {children}
+          </Container>
         </Box>
         <div id="Footer">
           <div>
