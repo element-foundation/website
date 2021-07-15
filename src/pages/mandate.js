@@ -2,13 +2,13 @@ import React from "react"
 import Layout from "../layout"
 import { Heading } from "theme-ui"
 import content from "../content.json"
-import Markdown from "../components/Markdown/Markdown"
+import { renderMarkdown as md } from "../util"
 
-export default function Mandate({location}) {
+export default function Mandate() {
   return (
     <Layout tabPage="mandate" surfaceColor="gold">
       <Heading>{content.mandate.title}</Heading>
-      <Markdown page="mandate" />
+      {md('mandate.body')}
     </Layout>
   )
 }

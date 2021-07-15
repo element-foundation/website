@@ -2,13 +2,13 @@ import React from "react"
 import Layout from "../layout"
 import { Heading } from "theme-ui"
 import content from "../content.json"
-import Markdown from "../components/Markdown/Markdown"
+import { renderMarkdown as md } from "../util"
 
-export default function Contact({location}) {
+export default function Contact() {
   return (
     <Layout surfaceColor="gray">
       <Heading>{content.contact.title}</Heading>
-      <Markdown page="contact" />
+      {md('contact.body')}
     </Layout>
   )
 }

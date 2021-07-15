@@ -2,13 +2,13 @@ import React from "react"
 import Layout from "../layout"
 import { Heading } from "theme-ui"
 import content from "../content.json"
-import Markdown from "../components/Markdown/Markdown"
+import { renderMarkdown as md } from "../util"
 
-export default function Board({location}) {
+export default function Board() {
   return (
     <Layout tabPage="board" surfaceColor="conch">
       <Heading>{content.board.title}</Heading>
-      <Markdown page="board" />
+      {md('board.body')}
     </Layout>
   )
 }

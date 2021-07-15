@@ -60,9 +60,9 @@ export default function Layout({ children, tabPage, surfaceColor }) {
           <Flex>
             <Box>(logo and site name)</Box>
             <Box>
-              <Link to="/">About</Link>
-              <Link to="/donations">Donations</Link>
-              <Link to="/contact">Contact</Link>
+              <Link to="/">{navTitles.about}</Link>
+              <Link to="/donations">{navTitles.donations}</Link>
+              <Link to="/contact">{navTitles.contact}</Link>
             </Box>
           </Flex>
           <Box>

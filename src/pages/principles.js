@@ -2,13 +2,13 @@ import React from "react"
 import Layout from "../layout"
 import { Heading } from "theme-ui"
 import content from "../content.json"
-import Markdown from "../components/Markdown/Markdown"
+import { renderMarkdown as md } from "../util"
 
-export default function Principles({location}) {
+export default function Principles() {
   return (
     <Layout tabPage="principles" surfaceColor="gold">
       <Heading>{content.principles.title}</Heading>
-      <Markdown page="principles" />
+      {md('principles.body')}
     </Layout>
   )
 }

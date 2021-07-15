@@ -2,13 +2,13 @@ import React from "react"
 import Layout from "../layout"
 import { Heading } from "theme-ui"
 import content from "../content.json"
-import Markdown from "../components/Markdown/Markdown"
+import { renderMarkdown as md } from "../util"
 
-export default function Home({location}) {
+export default function Home() {
   return (
     <Layout tabPage="about" surfaceColor="gray">
       <Heading>{content.about.title}</Heading>
-      <Markdown page="about" />
+      {md('about.body')}
     </Layout>
   )
 }
