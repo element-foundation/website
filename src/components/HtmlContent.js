@@ -9,6 +9,7 @@ export default function HtmlContent({page}) {
       query HtmlContentQuery {
         htmlContent {
           about
+          board
           donations
           contact
           mandate

@@ -1,16 +1,40 @@
 import React from "react"
 import Helmet from "react-helmet"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { Link } from "gatsby"
 import "./fonts.css"
 import LinkedInLogo from "./images/imported/linkedin.svg"
 import PageHead from "./components/PageHead"
-import { Box, ThemeProvider } from "theme-ui"
+import { Box, Flex, ThemeProvider } from "theme-ui"
+import content from "./content.json"
 
 import theme from './theme'
 
+const navTitles = content.common.nav
 
-export default function Layout({ navLinks = [], children, surfaceColor }) {
+const tabLinks = [
+  {
+    title: navTitles.about,
+    url: '/'
+  },
+  {
+    title: navTitles.mandate,
+    url: '/mandate'
+  },
+  {
+    title: navTitles.principles,
+    url: '/principles'
+  },
+  {
+    title: navTitles.board,
+    url: '/board'
+  },
+  {
+    title: navTitles.assets,
+    url: '/assets'
+  }
+]
+
+export default function Layout({ children, tabPage, surfaceColor }) {
   return (
     <div>
       <PageHead
@@ -32,16 +56,18 @@ export default function Layout({ navLinks = [], children, surfaceColor }) {
         }
       </Helmet>
       <ThemeProvider theme={theme}>
-        <div>
-          <div>
-            <div>
-              <Link to="/">
-                Home
-              </Link>
-              {navLinks}
-            </div>
-          </div>
-        </div>
+        <Box>
+          <Flex>
+            <Box>(logo and site name)</Box>
+            <Box>(top right nav)</Box>
+          </Flex>
+          <Box>
+            {tabLinks.map(link => <Link to={link.url}>
+                {link.title}{link.title.toLowerCase() === tabPage ? '*' : ''}
+              </Link>)
+            }
+          </Box>
+        </Box>
         <Box sx={{backgroundColor: `surface.${surfaceColor || 'gray'}`}}>
           {children}
         </Box>
@@ -50,12 +76,12 @@ export default function Layout({ navLinks = [], children, surfaceColor }) {
             <div>
               <Box sx={{ marginTop: "10px" }}>
                 <Box sx={{ marginTop: "18px" }}>
-                  Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+                  {content.common.licence}
                 </Box>
               </Box>
               <div>
                 <Link to="/terms-of-service#Terms-of-Service">
-                  Terms of Service
+                  {navTitles["terms-of-service"]}
                 </Link>
               </div>
               <Box sx={{ pt: "19px" }}>
