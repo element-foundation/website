@@ -53,10 +53,6 @@ const theme = {
       fontSize: 's',
       color: 'text',
       borderColor: 'text',
-      ':hover': {
-        color: 'primary',
-        borderBottom: '2px solid #ddd'
-      }
     }
   },
   layout: {

@@ -83,7 +83,10 @@ export default function Layout({ children, tabPage, surfaceColor }) {
               <Nav href="/contact">{navTitles.contact}</Nav>
             </Box>
           </Flex>
-          <Box sx={{ '& > *': { mr: '36px' }, pb: '28px' }}>
+          <Box sx={{ '& > *': { mr: '36px', ':hover': {
+        color: 'primary',
+        borderBottom: '2px solid #ddd'
+      } }, pb: '28px' }}>
             {tabPage && tabLinks.map(link => 
               <Nav href={link.url} sx={link.title.toLowerCase() === tabPage ? { '&, &:hover': {borderBottom: '2.4px solid', borderColor: 'primary'}}:{}}>
                 {link.title}
