@@ -51,12 +51,17 @@ const theme = {
     },
     nav: {
       fontSize: 's',
-      color: 'text'
+      color: 'text',
+      borderColor: 'text',
+      ':hover': {
+        color: 'primary'
+      }
     }
   },
   layout: {
     container: {
-      maxWidth: '1160px'
+      maxWidth: '1208px',
+      px: '24px'
     }
   },
   styles: {

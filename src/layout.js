@@ -34,8 +34,8 @@ const tabLinks = [
   }
 ]
 
-const Nav = ({href, children}) => <Link to={href} style={{textDecoration: 'none'}}>
-  <Text variant="nav">{children}</Text>
+const Nav = ({href, children, sx}) => <Link to={href} style={{textDecoration: 'none'}}>
+  <Text sx={sx} variant="nav">{children}</Text>
 </Link>
 
 export default function Layout({ children, tabPage, surfaceColor }) {
@@ -82,10 +82,11 @@ export default function Layout({ children, tabPage, surfaceColor }) {
               <Nav href="/contact">{navTitles.contact}</Nav>
             </Box>
           </Flex>
-          <Box>
-            {tabPage && tabLinks.map(link => <Link to={link.url}>
-                {link.title}{link.title.toLowerCase() === tabPage ? '*' : ''}
-              </Link>)
+          <Box sx={{ '& > *': { mr: '36px' }, pb: '28px' }}>
+            {tabPage && tabLinks.map(link => 
+              <Nav href={link.url} sx={link.title.toLowerCase() === tabPage ? { borderBottom: '2.4px solid'}:{}}>
+                {link.title}
+              </Nav>)
             }
           </Box>
         </Container>
