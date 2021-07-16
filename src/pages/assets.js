@@ -9,6 +9,7 @@ export default function Assets() {
     <Layout tabPage="assets" surfaceColor="conch">
       <Heading>{content.assets.title}</Heading>
       {md('assets.body')}
+      {md('assets.links')}
     </Layout>
   )
 }

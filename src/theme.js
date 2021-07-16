@@ -5,11 +5,14 @@ const theme = {
     surface: {
       gray: '#DAD7D1',
       gold: '#FBE38E',
-      conch: '#CADAD2'
+      conch: '#CADAD2',
+      lightGray: '#F6F0EB'
     },
     background: "#FFF",
     primary: '#111',
-    text: '#333'
+    text: '#333',
+    accent: '#000',
+    onLightGray: '#494847'
   },
   fonts: {
     body: 'Acumin Pro, system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
@@ -38,6 +41,7 @@ const theme = {
       fontFamily: 'body',
       lineHeight: 'heading',
       fontWeight: 'body',
+      fontSize: 'l',
     },
     ethAddress: {
       variant: 'text.default',
@@ -53,6 +57,9 @@ const theme = {
       fontSize: 's',
       color: 'text',
       borderColor: 'text',
+      ':hover': {
+        color: 'accent'
+      }
     }
   },
   layout: {
@@ -62,7 +69,8 @@ const theme = {
     },
     text: {
       maxWidth: '752px',
-      margin: '0 24px 0 0'
+      margin: '0 24px 0 0',
+      paddingTop: '28px'
     }
   },
   styles: {

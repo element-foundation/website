@@ -61,7 +61,7 @@ export default function Layout({ children, tabPage, surfaceColor }) {
         }
       </Helmet>
       <ThemeProvider theme={theme}>
-        <Container>
+        <Container sx={{ minHeight: '283px', position: 'relative'}}>
           <Flex sx={{
             alignItems: 'center', 
             justifyContent: 'space-between',
@@ -83,10 +83,10 @@ export default function Layout({ children, tabPage, surfaceColor }) {
               <Nav href="/contact">{navTitles.contact}</Nav>
             </Box>
           </Flex>
-          <Box sx={{ '& > *': { mr: '36px', ':hover': {
+          <Box sx={{ '& > *': { mr: '38px', ':hover': {
             color: 'primary',
             borderBottom: '2px solid #ddd'
-          }}, pb: '28px' }}>
+          }}, py: '28px', position: 'absolute', bottom: 0 }}>
             {tabPage && tabLinks.map(link => 
               <Nav href={link.url} sx={link.title.toLowerCase() === tabPage ? { '&, &:hover': {borderBottom: '2.4px solid', borderColor: 'primary'}}:{}}>
                 {link.title}
@@ -97,22 +97,19 @@ export default function Layout({ children, tabPage, surfaceColor }) {
         <Box sx={{backgroundColor: `surface.${surfaceColor || 'gray'}`, py: '55px'}}>
           <Container>
             {children}
-          </Container>
+          </Container>  
         </Box>
-        <div id="Footer">
-          <div>
-            <div>
-              <Box sx={{ marginTop: "10px" }}>
-                <Box sx={{ marginTop: "18px" }}>
-                  {content.common.licence}
-                </Box>
-              </Box>
-              <div>
-                <Link to="/terms-of-service#Terms-of-Service">
+        <Box sx={{ backgroundColor: 'surface.lightGray', color: 'onLightGray', py: '28px'}}>
+          <Container>
+            <Flex sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
+              <Flex sx={{ alignItems: 'center' }}>
+                <Text sx={{ fontSize: 'xs'}}>{content.common.licence}</Text>
+                <Box sx={{ width: '3px', height: '3px', borderRadius: '50%', background: '#C4C4C4', mx: '12px', position: 'relative', top: '-2px'}} />
+                <Nav href="/terms-of-service#Terms-of-Service" sx={{ color: 'onLightGray', fontSize: 'xs', position: 'relative', top: '-2px' }}>
                   {navTitles["terms-of-service"]}
-                </Link>
-              </div>
-              <Box sx={{ pt: "19px" }}>
+                </Nav>
+              </Flex>
+              <Box sx={{ opacity: '0.5' }}>
                 <a
                   href="https://www.linkedin.com/company/daifoundation"
                   target="_blank"
@@ -121,9 +118,9 @@ export default function Layout({ children, tabPage, surfaceColor }) {
                   <LinkedInLogo width="28px" height="28px" />
                 </a>
               </Box>
-            </div>
-          </div>
-        </div>
+            </Flex>
+          </Container>
+        </Box>
       </ThemeProvider>
     </div>
   )
