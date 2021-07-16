@@ -113,9 +113,9 @@ export default function Layout({ children, tabPage, surfaceColor }) {
                     ml: '47px'
                   }
                 }}>
-                  <Nav href="/#main">{navTitles.about}</Nav>
-                  <Nav href="/donations#main">{navTitles.donations}</Nav>
-                  <Nav href="/contact#main">{navTitles.contact}</Nav>
+                  <Nav href="/">{navTitles.about}</Nav>
+                  <Nav href="/donations">{navTitles.donations}</Nav>
+                  <Nav href="/contact">{navTitles.contact}</Nav>
                 </Box>
               </Flex>
               <Box sx={{ '& > *': { mr: '38px', ':hover': {
@@ -123,7 +123,7 @@ export default function Layout({ children, tabPage, surfaceColor }) {
                 borderBottom: '2px solid #ddd'
               }}, py: '28px', position: 'absolute', bottom: 0 }}>
                 {tabPage && tabLinks.map(link => 
-                  <Nav href={`${link.url}#main`} sx={link.title.toLowerCase() === tabPage ? { '&, &:hover': {borderBottom: '2.4px solid', borderColor: 'primary'}}:{}}>
+                  <Nav href={`${link.url}`} sx={link.title.toLowerCase() === tabPage ? { '&, &:hover': {borderBottom: '2.4px solid', borderColor: 'primary'}}:{}}>
                     {link.title}
                   </Nav>)
                 }
@@ -144,7 +144,7 @@ export default function Layout({ children, tabPage, surfaceColor }) {
                   <Flex sx={{ alignItems: 'center' }}>
                     <Text sx={{ fontSize: 'xs'}}>{content.common.licence}</Text>
                     <Box sx={{ width: '3px', height: '3px', borderRadius: '50%', background: '#C4C4C4', mx: '12px', position: 'relative', top: '-2px'}} />
-                    <Nav href="/terms-of-service#main" sx={{ color: 'onLightGray', fontSize: 'xs', position: 'relative', top: '-2px' }}>
+                    <Nav href="/terms-of-service" sx={{ color: 'onLightGray', fontSize: 'xs', position: 'relative', top: '-2px' }}>
                       {navTitles["terms-of-service"]}
                     </Nav>
                   </Flex>

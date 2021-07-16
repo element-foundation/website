@@ -19,7 +19,7 @@
   },
   "board": {
     "title": "Board",
-    "body": "To see who is on the board of Dai Foundation click here.\n \nThe link brings you to a page in the Danish Business Registry with information about Dai Fonden which is the Danish name for Dai Foundation. The members of the Dai Foundation board are listed in the section named \"Reelle ejere\"."
+    "body": "To see who is on the board of Dai Foundation click [here](https://cvrapi.dk/virksomhed/dk/dai-fonden/40645799).\n \nThe link brings you to a page in the Danish Business Registry with information about Dai Fonden which is the Danish name for Dai Foundation. The members of the Dai Foundation board are listed in the section named \"Reelle ejere\"."
   },
   "mandate": {
     "title": "Mandate",
@@ -38,7 +38,7 @@
   "assets": {
     "title": "Trademark & Assets",
     "body": "The assets that Dai Foundation safeguards includes trademarks, trademark associated artifacts such as domains and ENS names, and finally software. To see which assets Dai Foundation holds, select the relevant category:",
-    "links": "- Trademarks\n- Domains and ENS names\n- Software"
+    "links": "Trademarks<br/>Domains and ENS names<br/>Software"
   },
   "principles": {
     "title": "Principles",
