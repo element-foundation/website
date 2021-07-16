@@ -1,20 +1,16 @@
 import React from "react"
 import Layout from "../layout"
 import { graphql } from "gatsby"
-import { Box } from 'theme-ui'
+import { Container,  Box } from 'theme-ui'
+import theme from '../theme'
 
 export default function TermsOfService({location, data}) {
 
   return (
     <Layout>
-        <div id="Terms-of-Service" style={{paddingTop: '100px', background: 'none'}}>
-          <div>
-            <Box sx={{ maxWidth: "1000px" }}>
-              <div dangerouslySetInnerHTML={{ __html: data.tos.html }} />
-            </Box>
-          </div>
-        </div>
-      <div />
+      <Container variant="text" sx={theme.styles}>
+        <div dangerouslySetInnerHTML={{ __html: data.tos.html }} />
+      </Container>
     </Layout>
   )
 }

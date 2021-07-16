@@ -84,6 +84,24 @@ const theme = {
       variant: 'text.heading',
       fontSize: 'l',
     },
+    h2: {
+      fontWeight: 'body',
+    },
+    h3: {
+      fontWeight: 'body',
+    },
+    h4: {
+      fontWeight: 'body',
+    },
+    h5: {
+      fontWeight: 'body',
+    },
+    a: {
+      color: 'text',
+      ':hover': {
+        color: 'accent'
+      }
+    }
   }
 }
 
