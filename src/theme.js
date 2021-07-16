@@ -59,6 +59,10 @@ const theme = {
     container: {
       maxWidth: '1208px',
       px: '24px'
+    },
+    text: {
+      maxWidth: '752px',
+      margin: '0 24px 0 0'
     }
   },
   styles: {
