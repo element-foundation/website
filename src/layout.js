@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Helmet from "react-helmet"
 import { Link } from "gatsby"
 import "./fonts.css"
@@ -55,6 +55,66 @@ const FluidHeight = ({ children }) => <Box sx={{ display: 'table-row', height: '
   </Box>
 </Box>
 
+const HeaderDesktop = ({ tabPage }) => <Container sx={{ minHeight: '283px', position: 'relative' }}>
+    <Flex sx={{
+      alignItems: 'center', 
+      justifyContent: 'space-between',
+      py: '51px',
+    }}
+    >
+      <Link to="/" style={{ textDecoration: 'none' }}>
+        <Flex sx={{alignItems: 'center'}}>
+          <MainLogo style={{ marginRight: '17px'}} />
+          <Text variant="logo" sx={{ position: 'relative', top: '2px'}}>The Dai Foundation</Text>
+        </Flex>
+      </Link>
+      <Box sx={{ '& > *': {
+          ml: '47px'
+        }
+      }}>
+        <Nav href="/">{navTitles.about}</Nav>
+        <Nav href="/donations">{navTitles.donations}</Nav>
+        <Nav href="/contact">{navTitles.contact}</Nav>
+      </Box>
+    </Flex>
+    <Box sx={{ '& > *': { mr: '38px', ':hover': {
+      color: 'primary',
+      borderBottom: '2px solid #ddd'
+    }}, py: '28px', position: 'absolute', bottom: 0 }}>
+      {tabPage && tabLinks.map(link => 
+        <Nav href={`${link.url}`} sx={link.title.toLowerCase() === tabPage ? { '&, &:hover': {borderBottom: '2.4px solid', borderColor: 'primary'}}:{}}>
+          {link.title}
+        </Nav>)
+      }
+    </Box>
+  </Container>
+
+const HeaderMobile = () => {
+  const [ menuIsOpen, setMenuIsOpen ] = useState(false)
+
+  return <Box>
+    <Flex sx={{ backgroundColor: 'background', px: '24px', py: '18px', justifyContent: 'space-between', alignItems: 'center' }}>
+      <Link to="/" style={{ textDecoration: 'none' }}>
+        <Text variant="logo" sx={{ fontSize: '19px' }}>The Dai Foundation</Text>
+      </Link>
+      <Box sx={{ p: '4px' }} onClick={() => setMenuIsOpen(!menuIsOpen)}>
+        <svg width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="1" x2="27" y2="1" stroke="black" strokeWidth="2"/>
+          <line y1="11" x2="27" y2="11" stroke="black" strokeWidth="2"/>
+        </svg>
+      </Box>
+    </Flex>
+    { menuIsOpen && <Flex sx={{ position: 'absolute', top: '80px', right: 0, minWidth: '200px', flexDirection: 'column', backgroundColor: 'background'}}>
+      {tabLinks.map(link => 
+        <Nav href={`${link.url}`}>
+          {link.title}
+        </Nav>)}
+        <Nav href="/donations">{navTitles.donations}</Nav>
+        <Nav href="/contact">{navTitles.contact}</Nav>
+    </Flex>}
+  </Box>
+}
+
 export default function Layout({ children, tabPage, surfaceColor }) {
   return (
     <div>
@@ -96,39 +156,12 @@ export default function Layout({ children, tabPage, surfaceColor }) {
       <ThemeProvider theme={theme}>
         <FullHeightWrapper>
           <FixedHeight>
-            <Container sx={{ minHeight: '283px', position: 'relative' }}>
-              <Flex sx={{
-                alignItems: 'center', 
-                justifyContent: 'space-between',
-                py: '51px',
-              }}
-              >
-                <Link to="/" style={{ textDecoration: 'none' }}>
-                  <Flex sx={{alignItems: 'center'}}>
-                    <MainLogo style={{ marginRight: '17px'}} />
-                    <Text variant="logo" sx={{ position: 'relative', top: '2px'}}>The Dai Foundation</Text>
-                  </Flex>
-                </Link>
-                <Box sx={{ '& > *': {
-                    ml: '47px'
-                  }
-                }}>
-                  <Nav href="/">{navTitles.about}</Nav>
-                  <Nav href="/donations">{navTitles.donations}</Nav>
-                  <Nav href="/contact">{navTitles.contact}</Nav>
-                </Box>
-              </Flex>
-              <Box sx={{ '& > *': { mr: '38px', ':hover': {
-                color: 'primary',
-                borderBottom: '2px solid #ddd'
-              }}, py: '28px', position: 'absolute', bottom: 0 }}>
-                {tabPage && tabLinks.map(link => 
-                  <Nav href={`${link.url}`} sx={link.title.toLowerCase() === tabPage ? { '&, &:hover': {borderBottom: '2.4px solid', borderColor: 'primary'}}:{}}>
-                    {link.title}
-                  </Nav>)
-                }
-              </Box>
-            </Container>
+            <Box sx={{ display: ['none', 'block']}}>
+              <HeaderDesktop tabPage={tabPage} />
+            </Box>
+            <Box sx={{ display: ['block', 'none']}}>
+              <HeaderMobile />
+            </Box>
           </FixedHeight>
           <FluidHeight>
             <Box sx={{backgroundColor: `surface.${surfaceColor || 'gray'}`, py: '55px', height: '100%' }}>

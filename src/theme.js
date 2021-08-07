@@ -1,6 +1,7 @@
 
 
 const theme = {
+  breakpoints: [ '40em' ],
   buttons: {
     icon: {
       color: 'muted',
@@ -64,6 +65,7 @@ const theme = {
       fontSize: '26px',
       fontWeight: 'bold',
       color: 'primary',
+      whiteSpace: 'nowrap',
     },
     nav: {
       fontSize: 's',
