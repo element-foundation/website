@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../layout"
-import { Container, Heading, Text } from "theme-ui"
+import { Box, Container, Heading, Text } from "theme-ui"
 import content from "../content.json"
 import { renderMarkdown as md } from "../util"
 import EthAddress from '../components/EthAddress'
@@ -11,8 +11,11 @@ export default function Donations() {
       <Container variant="text">
         <Heading>{content.donations.title}</Heading>
         {md('donations.body')}
-        <EthAddress address="0x3366609b2815ec733a2b7e374d1..." />
-        <Text sx={{ fontSize: 'xs' }}>{md('donations.disclaimer')}</Text>
+        <Box sx={{ my: '40px' }}>
+          <EthAddress address="0x3366609b2815ec733a2b7e374d1..." />
+          <Box sx={{ height: '4px'}} />
+          <Text sx={{ fontSize: 'xs' }}>{md('donations.disclaimer')}</Text>
+        </Box>
         <Text>{content.donations.bottom}</Text>
       </Container>
     </Layout>
