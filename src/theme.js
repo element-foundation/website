@@ -1,6 +1,17 @@
 
 
 const theme = {
+  buttons: {
+    icon: {
+      color: 'muted',
+      cursor: 'pointer',
+      padding: 0,
+      transition: 'color 0.2s',
+      ':hover': {
+        color: 'accent',
+      }
+    }
+  },
   colors: {
     surface: {
       gray: '#DAD7D1',
@@ -12,7 +23,8 @@ const theme = {
     primary: '#111',
     text: '#333',
     accent: '#000',
-    onLightGray: '#494847'
+    onLightGray: '#494847',
+    muted: '#999',
   },
   fonts: {
     body: 'Acumin Pro, system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
