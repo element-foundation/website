@@ -11,7 +11,9 @@
       "assets": "Assets",
       "terms-of-service": "Terms of Service"
     },
-    "licence": "Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)"
+    "licence": "Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)",
+    "copy-tooltip": "Copy to clipboard",
+    "qr-tooltip": "View QR code"
   },
   "about": {
     "title": "What is the Dai Foundation?",

@@ -1,15 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Box, Flex, IconButton, Text } from 'theme-ui'
 import copy from 'copy-to-clipboard'
 import CopyIcon from '../images/imported/copy.svg'
 import QrIcon from '../images/imported/QR_icon.svg'
 import CloseIcon from '../images/imported/close.svg'
-import { QRCode } from "react-qr-svg";
+import { QRCode } from "react-qr-svg"
+import ReactTooltip from 'react-tooltip'
+import content from '../content.json'
 
 export default function EthAddress({ address }) {
   const [ showQR, setShowQR ] = useState(false)
+  const copyButton = useRef(null);
 
   return <>
+    <ReactTooltip effect="solid" delayShow={200} />
     <Box sx={{
       background: '#fff', 
       boxShadow: '0px 2px 3px rgba(0, 0, 0, 0.07)', 
@@ -27,10 +31,13 @@ export default function EthAddress({ address }) {
         justifyContent: 'space-between',
         width: '68px',
       }}>
-        <IconButton>
-          <CopyIcon onClick={() => copy(address)} />
+        <IconButton ref={copyButton} data-tip={content.common['copy-tooltip']} onClick={() => { 
+            copy(address)
+            ReactTooltip.hide(copyButton.current)
+          }}>
+          <CopyIcon />
         </IconButton>
-        <IconButton>
+        <IconButton data-tip={content.common['qr-tooltip']}>
           <QrIcon width={24} onClick={() => setShowQR(true)} />
         </IconButton>
       </Box>
