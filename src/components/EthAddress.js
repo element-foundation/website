@@ -10,7 +10,7 @@ import content from '../content.json'
 
 export default function EthAddress({ address }) {
   const [ showQR, setShowQR ] = useState(false)
-  const copyButton = useRef(null);
+  const copyButton = useRef(null)
 
   return <>
     <ReactTooltip effect="solid" delayShow={200} />
@@ -50,7 +50,8 @@ export default function EthAddress({ address }) {
       bottom: 0,
       right: 0,
       backgroundColor: 'rgba(0,0,0,0.2)',
-      alignItems: 'center'
+      alignItems: 'center',
+      zIndex: 1000
     }}
       onClick={() => setShowQR(false)}
     >
