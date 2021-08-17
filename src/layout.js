@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 import "./fonts.css"
 import MainLogo from "./images/imported/logo.svg"
 import LinkedInLogo from "./images/imported/linkedin.svg"
+import MenuOpen from "./images/imported/menu-open.svg"
+import MenuClose from "./images/imported/menu-close.svg"
 import PageHead from "./components/PageHead"
 import { Box, Container, Flex, Text, ThemeProvider } from "theme-ui"
 import content from "./content.json"
@@ -97,14 +99,25 @@ const HeaderMobile = () => {
       <Link to="/" style={{ textDecoration: 'none' }}>
         <Text variant="logo" sx={{ fontSize: '19px' }}>The Dai Foundation</Text>
       </Link>
-      <Box sx={{ p: '4px' }} onClick={() => setMenuIsOpen(!menuIsOpen)}>
-        <svg width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line y1="1" x2="27" y2="1" stroke="black" strokeWidth="2"/>
-          <line y1="11" x2="27" y2="11" stroke="black" strokeWidth="2"/>
-        </svg>
-      </Box>
+      <Flex sx={{ p: '4px', alignItems: 'center' }} onClick={() => setMenuIsOpen(!menuIsOpen)}>
+        {menuIsOpen ? <MenuClose /> : <MenuOpen />}
+      </Flex>
     </Flex>
-    { menuIsOpen && <Flex sx={{ position: 'absolute', top: '80px', right: 0, minWidth: '200px', flexDirection: 'column', backgroundColor: 'background'}}>
+    { menuIsOpen && <Flex sx={{ 
+        position: 'absolute', 
+        top: '72px', 
+        right: 0, 
+        minWidth: '200px',
+        maxWidth: '100vw',
+        flexDirection: 'column', 
+        backgroundColor: 'background',
+        py: '12px',
+        px: '24px',
+        boxShadow: '-1px 1px 2px rgb(0 0 0 / 10%)',
+        'a': {
+          marginBottom: '6px'
+        }
+      }}>
       {tabLinks.map(link => 
         <Nav href={`${link.url}`}>
           {link.title}
