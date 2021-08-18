@@ -186,10 +186,14 @@ export default function Layout({ children, tabPage, surfaceColor }) {
           <FixedHeight>
             <Box sx={{ backgroundColor: 'surface.lightGray', color: 'onLightGray', py: '28px'}}>
               <Container>
-                <Flex sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
-                  <Flex sx={{ alignItems: 'center' }}>
-                    <Text sx={{ fontSize: ['xs', 'xs']}}>{content.common.licence}</Text>
-                    <Box sx={{ width: '3px', height: '3px', borderRadius: '50%', background: '#C4C4C4', mx: '12px', position: 'relative', top: '-2px'}} />
+                <Flex sx={{ justifyContent: 'space-between', mb: ['14px', 0],
+                  alignItems: ['flex-start', 'center'], flexDirection: ['column', 'row'] }}
+                >
+                  <Flex sx={{ alignItems: ['flex-start', 'center'], flexDirection: ['column', 'row'], mb: ['24px', 0] }}>
+                    <Text sx={{ fontSize: ['xs', 'xs'], lineHeight: '1.7em', mb: ['25px', 0] }}>{content.common.licence}</Text>
+                    <Box sx={{ width: '3px', height: '3px', borderRadius: '50%', display: ['none', 'block'],
+                      background: '#C4C4C4', mx: '12px', position: 'relative', top: '-2px'}} 
+                    />
                     <Nav href="/terms-of-service" sx={{ color: 'onLightGray', fontSize: 'xs', position: 'relative', top: '-2px' }}>
                       {navTitles["terms-of-service"]}
                     </Nav>
@@ -200,7 +204,7 @@ export default function Layout({ children, tabPage, surfaceColor }) {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <LinkedInLogo width="28px" height="28px" />
+                      <LinkedInLogo width="21px" height="20px" />
                     </a>
                   </Box>
                 </Flex>
