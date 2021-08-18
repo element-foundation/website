@@ -15,7 +15,7 @@ export default function Home() {
         <Box sx={{ display: ['none', 'flex'], flexShrink: 0, alignItems: 'center' }}>
           <Image src="/img/aerial-view.png" sx={{ width: "249px", height: "374px"}} />
         </Box>
-        <Box sx={{ display: ['flex', 'none'], flexShrink: 0, justifyContent: 'center' }}>
+        <Box sx={{ display: ['flex', 'none'], flexShrink: 0, justifyContent: 'center', mt: '17px' }}>
           <Image src="/img/aerial-view-small.png" sx={{ width: "205px", height: "165px"}} />
         </Box>
       </Flex>

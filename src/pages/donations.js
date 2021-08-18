@@ -14,7 +14,7 @@ export default function Donations() {
         <Box sx={{ my: '40px' }}>
           <EthAddress address="0x85A294558d5597aC156dd920A74b502b6F2B1b86" />
           <Box sx={{ height: '4px'}} />
-          <Text sx={{ fontSize: 'xs' }}>{md('donations.disclaimer')}</Text>
+          <Text sx={{ fontSize: ['xs', 'xs'] }}>{md('donations.disclaimer')}</Text>
         </Box>
         <Text>{content.donations.bottom}</Text>
       </Container>

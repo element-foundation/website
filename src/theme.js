@@ -46,6 +46,7 @@ const theme = {
   },
   text: {
     default: {
+      fontSize: ['xs', 'm'],
       fontFamily: 'body',
       lineHeight: 'body',
       fontWeight: 'body',
@@ -89,10 +90,7 @@ const theme = {
   },
   styles: {
     root: {
-      fontFamily: 'body',
-      lineHeight: 'body',
-      fontWeight: 'body',
-      fontSize: 'm',
+      variant: 'text.default'
     },
     h1: {
       variant: 'text.heading',

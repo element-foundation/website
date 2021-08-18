@@ -188,7 +188,7 @@ export default function Layout({ children, tabPage, surfaceColor }) {
               <Container>
                 <Flex sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
                   <Flex sx={{ alignItems: 'center' }}>
-                    <Text sx={{ fontSize: 'xs'}}>{content.common.licence}</Text>
+                    <Text sx={{ fontSize: ['xs', 'xs']}}>{content.common.licence}</Text>
                     <Box sx={{ width: '3px', height: '3px', borderRadius: '50%', background: '#C4C4C4', mx: '12px', position: 'relative', top: '-2px'}} />
                     <Nav href="/terms-of-service" sx={{ color: 'onLightGray', fontSize: 'xs', position: 'relative', top: '-2px' }}>
                       {navTitles["terms-of-service"]}
