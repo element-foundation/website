@@ -97,15 +97,15 @@ const HeaderMobile = () => {
   return <Box>
     <Flex sx={{ backgroundColor: 'background', px: '24px', py: '18px', justifyContent: 'space-between', alignItems: 'center' }}>
       <Link to="/" style={{ textDecoration: 'none' }}>
-        <Text variant="logo" sx={{ fontSize: '19px' }}>The Dai Foundation</Text>
+        <Text variant="logo" sx={{ fontSize: '19px', position: 'relative', top: '3px' }}>The Dai Foundation</Text>
       </Link>
-      <Flex sx={{ p: '4px', alignItems: 'center' }} onClick={() => setMenuIsOpen(!menuIsOpen)}>
+      <Flex sx={{ px: '4px', py: menuIsOpen ? '2px': '4px', alignItems: 'center', position: 'relative', left: '3px', top: '-1px' }} onClick={() => setMenuIsOpen(!menuIsOpen)}>
         {menuIsOpen ? <MenuClose /> : <MenuOpen />}
       </Flex>
     </Flex>
     { menuIsOpen && <Flex sx={{ 
         position: 'absolute', 
-        top: '72px', 
+        top: '64px', 
         right: 0, 
         minWidth: '200px',
         maxWidth: '100vw',
