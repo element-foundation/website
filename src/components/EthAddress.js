@@ -21,15 +21,22 @@ export default function EthAddress({ address }) {
       display: 'inline-flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      py: '7px',
       px: '11px',
+      maxWidth: '576px',
+      width: '100%',
     }}>
-      <Text variant="ethAddress" sx={{ ml: '12px', mr: '16px', position: 'relative', top: '2px'}}>{address}</Text>
+      <Box sx={{ overflowX: 'hidden', position: 'relative', height: '46px', width: '100%' }}>
+        <Text variant="ethAddress" sx={{ ml: '12px', mr: '16px', position: 'absolute', top: '10px', left: 0 }}>{address}</Text>
+        <Box sx={{ background: 'linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%)', 
+          width: '32px', position: 'absolute', right: 0, top: 0, bottom: 0 }} />
+      </Box>
       <Box sx={{ 
         display: 'inline-flex', 
         alignItems: 'center',
         justifyContent: 'space-between',
         width: '68px',
+        height: '100%',
+        float: 'right'
       }}>
         <IconButton ref={copyButton} data-tip={content.common['copy-tooltip']} onClick={() => { 
             copy(address)

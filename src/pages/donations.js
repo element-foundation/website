@@ -12,7 +12,7 @@ export default function Donations() {
         <Heading>{content.donations.title}</Heading>
         {md('donations.body')}
         <Box sx={{ my: '40px' }}>
-          <EthAddress address="0x3366609b2815ec733a2b7e374d1..." />
+          <EthAddress address="0x85A294558d5597aC156dd920A74b502b6F2B1b86" />
           <Box sx={{ height: '4px'}} />
           <Text sx={{ fontSize: 'xs' }}>{md('donations.disclaimer')}</Text>
         </Box>
