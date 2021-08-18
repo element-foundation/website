@@ -8,12 +8,12 @@ import DaiMaker from "../images/imported/dai-maker.svg"
 export default function Mandate() {
   return (
     <Layout tabPage="mandate" surfaceColor="gold">
-      <Flex sx={{ justifyContent: "space-between" }}>
+      <Flex sx={{ justifyContent: "space-between", flexDirection: ['column', 'row'] }}>
         <Container variant="text">
           <Heading>{content.mandate.title}</Heading>
           {md('mandate.body')}
         </Container>
-        <Flex sx={{ justifyContent: "flex-end", alignItems: "center", mt: "26px"}}>
+        <Flex sx={{ justifyContent: ["center", "flex-end"], alignItems: "center", m: "26px auto 0", maxWidth: ['256px', 'unset']}}>
           <DaiMaker />
         </Flex>
       </Flex>
