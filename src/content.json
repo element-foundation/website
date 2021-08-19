@@ -17,7 +17,7 @@
   },
   "about": {
     "title": "What is the Dai Foundation?",
-    "body": "The Dai Foundation is an independent legal entity for safeguarding the Maker community’s intellectual property (IP). It was created in Denmark and operates solely on the basis of objective and rigid statutes that define its mandate. In the beginning of 2020, the Maker Foundation irreversibly transferred the ownership of Maker and Dai trademarks to the Dai Foundation for safekeeping."
+    "body": "The Dai Foundation is an independent legal entity for safeguarding the Maker community’s intellectual property (IP). It was created in Denmark and operates solely on the basis of objective and rigid statutes that define its mandate. In the beginning of 2020, the Maker Foundation transferred the ownership of Maker and Dai trademarks to the Dai Foundation for perpetual safekeeping."
   },
   "board": {
     "title": "Board",
@@ -25,7 +25,7 @@
   },
   "mandate": {
     "title": "Mandate",
-    "body": "The Dai Foundation has been formed as an independent and non-profit-oriented entity by the initiators of the open, decentralized and permissionless MakerDAO system with the virtual currency Dai. Its mandate is to safeguard what cannot be technologically decentralized in the Maker Protocol which includes trademarks and other intellectual property, such as open-source copyrights and other relevant [assets](/assets)."
+    "body": "The Dai Foundation has been formed as an independent and non-profit-oriented entity by the initiators of the open, decentralized and permissionless MakerDAO system with the virtual currency Dai. Its mandate is to safeguard what cannot be technologically decentralized in the Maker Protocol which includes trademarks and other intellectual property, such as open-source copyrights and other relevant [assets](/assets).\n\nFor more information about the mandate read the [Dai Foundation Trust Deed](https://drive.google.com/file/d/14S-VIKsLtWq9xdVguaIZgNqtXcTkO3Bq/view?usp=sharing)."
   },
   "donations": {
     "title": "Donate to support the work of Dai Foundation.",
@@ -39,8 +39,7 @@
   },
   "assets": {
     "title": "Trademark & Assets",
-    "body": "The assets that Dai Foundation safeguards includes trademarks, trademark associated artifacts such as domains and ENS names, and finally software. To see which assets Dai Foundation holds, select the relevant category:",
-    "links": "[Trademarks](https://docs.google.com/spreadsheets/d/1ivdXJ1WHbi9GgRhfSIYWgNs3chxuWywYbDhPbIASbao/edit#gid=1600241482)<br/>[Domains and ENS names](https://docs.google.com/spreadsheets/d/1ivdXJ1WHbi9GgRhfSIYWgNs3chxuWywYbDhPbIASbao/edit#gid=555993732)<br/>[Software](https://docs.google.com/spreadsheets/d/1ivdXJ1WHbi9GgRhfSIYWgNs3chxuWywYbDhPbIASbao/edit#gid=1534715058)<br/>[Social media and other accounts](https://docs.google.com/spreadsheets/d/1ivdXJ1WHbi9GgRhfSIYWgNs3chxuWywYbDhPbIASbao/edit#gid=334066104)"
+    "body": "The assets that Dai Foundation safeguards includes trademarks, trademark associated artifacts such as domains and ENS names, and software. To see which assets Dai Foundation holds, select the relevant category:\n\n[Trademarks](https://docs.google.com/spreadsheets/d/1ivdXJ1WHbi9GgRhfSIYWgNs3chxuWywYbDhPbIASbao/edit#gid=1600241482)<br/>[Domains and ENS names](https://docs.google.com/spreadsheets/d/1ivdXJ1WHbi9GgRhfSIYWgNs3chxuWywYbDhPbIASbao/edit#gid=555993732)<br/>[Software](https://docs.google.com/spreadsheets/d/1ivdXJ1WHbi9GgRhfSIYWgNs3chxuWywYbDhPbIASbao/edit#gid=1534715058)<br/>[Social media and other accounts](https://docs.google.com/spreadsheets/d/1ivdXJ1WHbi9GgRhfSIYWgNs3chxuWywYbDhPbIASbao/edit#gid=334066104)\n\nFor guidance on permissible use of the trademarks, read the [Dai Foundation Trademark Policy](https://docs.google.com/document/d/1bk7Tyq_Owss0tBOzX_6BhA3fwenUe6wxYKSxO1JcLwY/edit?usp=sharing)."
   },
   "principles": {
     "title": "Principles",

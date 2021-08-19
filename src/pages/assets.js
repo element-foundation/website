@@ -10,7 +10,6 @@ export default function Assets() {
       <Container variant="text">
         <Heading>{content.assets.title}</Heading>
         {md('assets.body')}
-        {md('assets.links')}
       </Container>
     </Layout>
   )
