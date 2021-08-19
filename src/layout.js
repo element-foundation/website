@@ -115,15 +115,15 @@ const HeaderMobile = () => {
         px: '24px',
         boxShadow: '-1px 1px 2px rgb(0 0 0 / 10%)',
         'a': {
-          marginBottom: '6px'
+          marginBottom: '8px'
         }
       }}>
       {tabLinks.map(link => 
-        <Nav href={`${link.url}`}>
+        <Nav sx={{ fontSize: 'm'}} href={`${link.url}`}>
           {link.title}
         </Nav>)}
-        <Nav href="/donations">{navTitles.donations}</Nav>
-        <Nav href="/contact">{navTitles.contact}</Nav>
+        <Nav sx={{ fontSize: 'm'}} href="/donations">{navTitles.donations}</Nav>
+        <Nav sx={{ fontSize: 'm'}} href="/contact">{navTitles.contact}</Nav>
     </Flex>}
   </Box>
 }
