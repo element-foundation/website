@@ -42,7 +42,7 @@ const theme = {
   },
   lineHeights: {
     body: 1.5,
-    heading: 1.125,
+    heading: 1.25,
   },
   text: {
     default: {
@@ -56,7 +56,6 @@ const theme = {
       lineHeight: 'heading',
       fontWeight: 'body',
       fontSize: 'l',
-      lineHeight: '1.25',
       mb: ['24px', '28px']
     },
     ethAddress: {
