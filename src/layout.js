@@ -116,7 +116,8 @@ const HeaderMobile = () => {
         boxShadow: '-1px 1px 2px rgb(0 0 0 / 10%)',
         'a': {
           marginBottom: '8px'
-        }
+        },
+        zIndex: 2000
       }}>
       {tabLinks.map(link => 
         <Nav sx={{ fontSize: 'm'}} href={`${link.url}`}>
