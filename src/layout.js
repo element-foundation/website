@@ -177,7 +177,7 @@ export default function Layout({ children, tabPage, surfaceColor }) {
             </Box>
           </FixedHeight>
           <FluidHeight>
-            <Box sx={{backgroundColor: `surface.${surfaceColor || 'gray'}`, py: '55px', height: '100%' }}>
+            <Box sx={{backgroundColor: `surface.${surfaceColor || 'gray'}`, pb: '55px', pt: ['9px', '55px'], height: '100%' }}>
               <Container>
                 {children}
               </Container>  

@@ -56,6 +56,8 @@ const theme = {
       lineHeight: 'heading',
       fontWeight: 'body',
       fontSize: 'l',
+      lineHeight: '1.25',
+      mb: ['24px', '28px']
     },
     ethAddress: {
       variant: 'text.default',
@@ -85,7 +87,7 @@ const theme = {
     text: {
       maxWidth: '752px',
       margin: '0 24px 0 0',
-      paddingTop: '28px'
+      paddingTop: '26px'
     }
   },
   styles: {
