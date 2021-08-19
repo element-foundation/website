@@ -30,7 +30,7 @@
   "donations": {
     "title": "Donate to support the work of Dai Foundation.",
     "body": "Dai Foundation accept donations in any liquid assets on the Ethereum Blockchain sent to the following wallet address:",
-    "disclaimer": "See the Dai Foundation [policy](/terms-of-service) for accepting crypto donations",
+    "disclaimer": "See the Dai Foundation [policy](https://docs.google.com/document/d/1zNe5A4yce4A0qs8RPF27rbGoNePEdnMwWf_CmPfWbTo/edit?usp=sharing) for accepting crypto donations",
     "bottom": "Your donation is highly appreciated."
   },
   "contact": {
@@ -40,7 +40,7 @@
   "assets": {
     "title": "Trademark & Assets",
     "body": "The assets that Dai Foundation safeguards includes trademarks, trademark associated artifacts such as domains and ENS names, and finally software. To see which assets Dai Foundation holds, select the relevant category:",
-    "links": "Trademarks<br/>Domains and ENS names<br/>Software"
+    "links": "[Trademarks](https://docs.google.com/spreadsheets/d/1ivdXJ1WHbi9GgRhfSIYWgNs3chxuWywYbDhPbIASbao/edit#gid=1600241482)<br/>[Domains and ENS names](https://docs.google.com/spreadsheets/d/1ivdXJ1WHbi9GgRhfSIYWgNs3chxuWywYbDhPbIASbao/edit#gid=555993732)<br/>[Software](https://docs.google.com/spreadsheets/d/1ivdXJ1WHbi9GgRhfSIYWgNs3chxuWywYbDhPbIASbao/edit#gid=1534715058)<br/>[Social media and other accounts](https://docs.google.com/spreadsheets/d/1ivdXJ1WHbi9GgRhfSIYWgNs3chxuWywYbDhPbIASbao/edit#gid=334066104)"
   },
   "principles": {
     "title": "Principles",
