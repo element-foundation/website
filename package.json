@@ -1,7 +1,7 @@
 {
-  "name": "dai-foundation-website",
+  "name": "element-foundation-website",
   "private": true,
-  "description": "Official Dai Foundation website.",
+  "description": "Official Element Foundation website.",
   "version": "0.1.1",
   "license": "0BSD",
   "scripts": {
