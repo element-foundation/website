@@ -66,7 +66,7 @@ const HeaderDesktop = ({ tabPage }) => <Container sx={{ minHeight: '283px', posi
     >
       <Link to="/" style={{ textDecoration: 'none' }}>
         <Flex sx={{alignItems: 'center'}}>
-          <MainLogo style={{ marginRight: '17px'}} />
+          {/* <MainLogo style={{ marginRight: '17px'}} /> */}
           <Text variant="logo" sx={{ position: 'relative', top: '2px'}}>The Element Foundation</Text>
         </Flex>
       </Link>
